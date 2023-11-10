@@ -1,0 +1,404 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="Fragments.TodayFragment">
+
+        <!--    Today weather    -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/todayCard"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            >
+
+            <TextView
+                android:id="@+id/locationtdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_text"
+                android:paddingLeft="35dp"
+                android:paddingTop="3dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="3dp"
+                android:text="KL"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/highTemptdy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="90dp"
+                android:text="24°" />
+
+            <TextView
+                android:id="@+id/lowTemptday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="130dp"
+                android:text="17°" />
+
+            <TextView
+                android:id="@+id/weathertdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="23dp"
+                android:text="Clear"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/catiountdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="8dp"
+                android:text="*No cautions as for now"
+                android:textSize="8dp"/>
+
+            <ImageView
+                android:id="@+id/moonsvg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/moon_svgrepo" />
+
+
+            <TextView
+                android:id="@+id/temptdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="30°C"
+                android:textSize="70dp" />
+
+            <TextView
+                android:id="@+id/windspeedtdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="230dp"
+                android:text="4 m/s" />
+
+            <TextView
+                android:id="@+id/detailstdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="230dp"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/unkownmmtdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="198dp"
+                android:text="0 mm" />
+
+            <TextView
+                android:id="@+id/unknownperctdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="200dp"
+                android:text="30%" />
+
+            <ImageView
+                android:id="@+id/arrowtdyCard"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="230dp"
+                android:src="@drawable/arrow_right_svgrepo_com" />
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="315dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="180dp"
+                    android:background="#FFFFFF" />
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--    Air Quality     -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/airqualityToday"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="310dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp">
+
+
+            <ImageView
+                android:id="@+id/maskSvg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/masksvg" />
+
+            <TextView
+                android:id="@+id/maskRequiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="105dp"
+                android:text="Mask Required"
+                android:textSize="10.5dp" />
+
+            <TextView
+                android:id="@+id/healthEffictsToday"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="95dp"
+                android:layout_marginTop="105dp"
+                android:gravity="center_horizontal"
+                android:text="Okay, but sensitive individuals may experience minor health effects"
+                android:textSize="8dp" />
+
+            <TextView
+                android:id="@+id/AirQualityTextOnlyToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="135dp"
+                android:layout_marginTop="10dp"
+                android:text="Air Quality:"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/airqualityTextRateToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="72dp"
+                android:text="Moderate"
+                android:textColor="#FF9800"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/airqualityNumberToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="40dp"
+                android:text="64"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/faceSvg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/expressionless_facesvg" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--    Map    -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mapToday"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="470dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp">
+
+
+            <FrameLayout
+                android:id="@+id/mapContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--    What to wear today    -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/clothesToday"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="610dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#262627"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:id="@+id/clothesToWear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Clothes according to the weather"
+                android:textSize="19dp" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="60dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/clothHat"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@color/clothesColor"
+                    android:padding="10dp"
+                    android:src="@drawable/capsvg" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="85dp"
+                android:layout_marginTop="60dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/clothGlasses"
+                    android:layout_width="66dp"
+                    android:layout_height="60dp"
+                    android:background="@color/clothesColor"
+                    android:padding="10dp"
+                    android:src="@drawable/sunglassessvg" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="60dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/clothShirt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@color/clothesColor"
+                    android:padding="10dp"
+                    android:src="@drawable/shirtsvg" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="60dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/clothPants"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@color/clothesColor"
+                    android:padding="10dp"
+                    android:src="@drawable/shortssvg" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="60dp"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:id="@+id/clothShoes"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@color/clothesColor"
+                    android:padding="10dp"
+                    android:src="@drawable/sneakersvg" />
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--    Donate today    -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/donation"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="770dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#262627"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:id="@+id/dontationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:text="Help flood victims with just one tap!"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="265dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#F6E338"
+                android:text="Donate"
+                android:textStyle="bold"
+                android:theme="@style/Theme.Material3.Dark" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </FrameLayout>
+</ScrollView>

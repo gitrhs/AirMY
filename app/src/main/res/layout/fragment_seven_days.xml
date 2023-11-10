@@ -1,0 +1,785 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="Fragments.SevenDaysFragment">
+
+        <!--    First CARD     -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/svndayfirstCard"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/locationCardOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_text"
+                android:paddingLeft="35dp"
+                android:paddingTop="3dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="3dp"
+                android:text="KL"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/dayOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="23dp"
+                android:text="Today"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/weatherOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="23dp"
+                android:text="Clear"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tempOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="30°C"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/windspeedOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="100dp"
+                android:text="4 m/s" />
+
+            <TextView
+                android:id="@+id/detailsOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="100dp"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/unkownmmOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="305dp"
+                android:layout_marginTop="70dp"
+                android:text="0 mm" />
+
+            <TextView
+                android:id="@+id/unknownpercOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="70dp"
+                android:text="30%" />
+
+            <ImageView
+                android:id="@+id/arrowOne"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/arrow_right_svgrepo_com" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--    Second CARD     -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/svndaySecondCard"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/locationCardTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_text"
+                android:paddingLeft="35dp"
+                android:paddingTop="3dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="3dp"
+                android:text="KL"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/dayTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="23dp"
+                android:text="Today"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/weatherTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="23dp"
+                android:text="Clear"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tempTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="30°C"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/windspeedTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="100dp"
+                android:text="4 m/s" />
+
+            <TextView
+                android:id="@+id/detailsTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="100dp"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/unkownmmTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="305dp"
+                android:layout_marginTop="70dp"
+                android:text="0 mm" />
+
+            <TextView
+                android:id="@+id/unknownpercTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="70dp"
+                android:text="30%" />
+
+            <ImageView
+                android:id="@+id/arrowTwo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/arrow_right_svgrepo_com" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--    Third CARD     -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/svndayThirdCard"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="330dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/locationCardThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_text"
+                android:paddingLeft="35dp"
+                android:paddingTop="3dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="3dp"
+                android:text="KL"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/dayThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="23dp"
+                android:text="Today"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/weatherThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="23dp"
+                android:text="Clear"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tempThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="30°C"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/windspeedThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="100dp"
+                android:text="4 m/s" />
+
+            <TextView
+                android:id="@+id/detailsThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="100dp"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/unkownmmThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="305dp"
+                android:layout_marginTop="70dp"
+                android:text="0 mm" />
+
+            <TextView
+                android:id="@+id/unknownpercThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="70dp"
+                android:text="30%" />
+
+            <ImageView
+                android:id="@+id/arrowThree"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/arrow_right_svgrepo_com" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--    Fourth CARD     -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/svndayForthCard"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="490dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/locationCardFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_text"
+                android:paddingLeft="35dp"
+                android:paddingTop="3dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="3dp"
+                android:text="KL"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/dayFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="23dp"
+                android:text="Today"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/weatherFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="23dp"
+                android:text="Clear"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tempFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="30°C"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/windspeedFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="100dp"
+                android:text="4 m/s" />
+
+            <TextView
+                android:id="@+id/detailsFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="100dp"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/unkownmmFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="305dp"
+                android:layout_marginTop="70dp"
+                android:text="0 mm" />
+
+            <TextView
+                android:id="@+id/unknownpercFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="70dp"
+                android:text="30%" />
+
+            <ImageView
+                android:id="@+id/arrowFour"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/arrow_right_svgrepo_com" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--    Fifth CARD     -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/svndayFifthCard"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="650dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/locationCardFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_text"
+                android:paddingLeft="35dp"
+                android:paddingTop="3dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="3dp"
+                android:text="KL"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/dayFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="23dp"
+                android:text="Today"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/weatherFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="23dp"
+                android:text="Clear"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tempFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="30°C"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/windspeedFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="100dp"
+                android:text="4 m/s" />
+
+            <TextView
+                android:id="@+id/detailsFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="100dp"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/unkownmmFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="305dp"
+                android:layout_marginTop="70dp"
+                android:text="0 mm" />
+
+            <TextView
+                android:id="@+id/unknownpercFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="70dp"
+                android:text="30%" />
+
+            <ImageView
+                android:id="@+id/arrowFive"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/arrow_right_svgrepo_com" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--    Sixth CARD     -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/svndaySixthCard"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="810dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/locationCardSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_text"
+                android:paddingLeft="35dp"
+                android:paddingTop="3dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="3dp"
+                android:text="KL"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/daySix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="23dp"
+                android:text="Today"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/weatherSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="23dp"
+                android:text="Clear"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tempSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="30°C"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/windspeedSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="100dp"
+                android:text="4 m/s" />
+
+            <TextView
+                android:id="@+id/detailsSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="100dp"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/unkownmmSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="305dp"
+                android:layout_marginTop="70dp"
+                android:text="0 mm" />
+
+            <TextView
+                android:id="@+id/unknownpercSix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="70dp"
+                android:text="30%" />
+
+            <ImageView
+                android:id="@+id/arrowSix"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/arrow_right_svgrepo_com" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <!--    Seventh CARD     -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/svndaySeventhCard"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="970dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:id="@+id/locationCardSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_text"
+                android:paddingLeft="35dp"
+                android:paddingTop="3dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="3dp"
+                android:text="KL"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/daySeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="23dp"
+                android:text="Today"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/weatherSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="315dp"
+                android:layout_marginTop="23dp"
+                android:text="Clear"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tempSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="30°C"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/windspeedSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="100dp"
+                android:text="4 m/s" />
+
+            <TextView
+                android:id="@+id/detailsSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="100dp"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/unkownmmSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="305dp"
+                android:layout_marginTop="70dp"
+                android:text="0 mm" />
+
+            <TextView
+                android:id="@+id/unknownpercSeven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="70dp"
+                android:text="30%" />
+
+            <ImageView
+                android:id="@+id/arrowSeven"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/arrow_right_svgrepo_com" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+</ScrollView>
