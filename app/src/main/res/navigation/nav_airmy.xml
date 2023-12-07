@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_airmy"
+    app:startDestination="@id/DestNewsPage1">
+
+    <fragment
+        android:id="@+id/DestNewsPage1"
+        android:name="com.example.airmy.NewsPage1Fragment"
+        android:label="NewsPage1Fragment" />
+    <fragment
+        android:id="@+id/DestNewsPage2"
+        android:name="com.example.airmy.NewsPage2Fragment"
+        android:label="NewsPage2Fragment" />
+    <fragment
+        android:id="@+id/DestSettings"
+        android:name="com.example.airmy.SettingsPageFragment"
+        android:label="SettingsPageFragment" />
+    <fragment
+        android:id="@+id/DestUserProfile"
+        android:name="com.example.airmy.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+</navigation>
