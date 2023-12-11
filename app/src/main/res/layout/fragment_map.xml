@@ -10,7 +10,7 @@
         android:id="@+id/mapTextHolder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Map Holder, not sure if i should do it or not ?"
+        android:text="Map Holder"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="50dp"
         android:textSize="20dp" />

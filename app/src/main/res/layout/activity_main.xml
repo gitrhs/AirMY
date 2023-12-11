@@ -21,7 +21,7 @@
             android:layout_marginLeft="45dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
-            app:srcCompat="@drawable/homeicon" />
+            app:srcCompat="@drawable/house_clicked" />
 
         <ImageView
             android:id="@+id/newss"
@@ -30,7 +30,7 @@
             android:layout_marginLeft="60dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
-            app:srcCompat="@drawable/news" />
+            app:srcCompat="@drawable/news_unclicked" />
 
         <ImageView
             android:id="@+id/setting"
@@ -39,7 +39,7 @@
             android:layout_marginLeft="60dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
-            app:srcCompat="@drawable/settings" />
+            app:srcCompat="@drawable/settings_unclicked" />
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
@@ -59,7 +59,7 @@
             android:id="@+id/locationTextId"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_marginLeft="75dp"
+            android:layout_marginLeft="45dp"
             android:layout_marginTop="5dp"
             android:text="Kuala Lumpur"
             android:textColor="@color/white" />
@@ -68,7 +68,7 @@
             android:id="@+id/locationsvg"
             android:layout_width="40dp"
             android:layout_height="20dp"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             app:srcCompat="@drawable/location" />
 
@@ -113,6 +113,7 @@
 
         </com.google.android.material.tabs.TabLayout>
     </com.google.android.material.card.MaterialCardView>
+
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPageSwitcher"

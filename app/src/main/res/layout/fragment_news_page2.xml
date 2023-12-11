@@ -1,0 +1,328 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="Fragments.NewsPage2Fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_user_profile2"-->
+<!--        android:layout_width="41dp"-->
+<!--        android:layout_height="38dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="55dp"-->
+<!--        android:layout_marginBottom="12dp"-->
+<!--        app:srcCompat="@drawable/ic_user_profile" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/view_latest"-->
+<!--        android:layout_width="142dp"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="99dp"-->
+<!--        android:layout_marginEnd="198dp"-->
+<!--        android:background="@drawable/bg_latest_dark" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/view_topthisweek"-->
+<!--        android:layout_width="142dp"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="99dp"-->
+<!--        android:layout_marginEnd="56dp"-->
+<!--        android:background="@drawable/bg_topthisweek_light"></View>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_news"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginStart="157dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginEnd="150dp"-->
+<!--        android:fontFamily="@font/montserrat_bold"-->
+<!--        android:text="News"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="34sp"-->
+<!--        android:textStyle="bold" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_topthisweek"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="101dp"-->
+<!--        android:layout_marginEnd="70dp"-->
+<!--        android:fontFamily="@font/montserrat"-->
+<!--        android:text="TOP THIS WEEK"-->
+<!--        android:textColor="#FFFFFF" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_latest"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="101dp"-->
+<!--        android:layout_marginEnd="241dp"-->
+<!--        android:fontFamily="@font/montserrat"-->
+<!--        android:text="LATEST"-->
+<!--        android:textColor="#FFFFFF" />-->
+
+    <View
+        android:id="@+id/view_news1"
+        android:layout_width="340dp"
+        android:layout_height="152dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_firstnews" />
+
+        <TextView
+            android:id="@+id/tv_news1_publish"
+            android:layout_width="119dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="125dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:fontFamily="@font/montserrat"
+            android:text="Published: Oct 30, 2023 12:00 PM"
+            android:textColor="#A1FFFFFF"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_news1_title"
+            android:layout_width="151dp"
+            android:layout_height="112dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="A Sustainable Alternative to Air Conditioning"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <View
+        android:id="@+id/view_news2"
+        android:layout_width="wrap_content"
+        android:layout_height="144dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/bg_firstnews" />
+
+    <View
+        android:id="@+id/view_news3"
+        android:layout_width="335dp"
+        android:layout_height="147dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="329dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/bg_firstnews" />
+
+    <View
+        android:id="@+id/view_emailaddress"
+        android:layout_width="334dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/bg_firstnews" />
+
+        <EditText
+            android:id="@+id/et_enteremailaddress"
+            android:layout_width="216dp"
+            android:layout_height="48dp"
+            android:layout_alignStart="@+id/view_emailaddress"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="520dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:fontFamily="@font/montserrat"
+            android:inputType="textEmailAddress"
+            android:text="Enter your email address"
+            android:textColor="#79FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="520dp"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="#3F51B5"
+            android:fontFamily="@font/montserrat"
+            android:paddingLeft="15dp"
+            android:paddingTop="3dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="3dp"
+            android:text="Sign up"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_home"-->
+<!--        android:layout_width="45dp"-->
+<!--        android:layout_height="43dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="310dp"-->
+<!--        android:layout_marginBottom="9dp"-->
+<!--        app:srcCompat="@drawable/ic_homepage" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_bookicon"-->
+<!--        android:layout_width="41dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginEnd="183dp"-->
+<!--        android:layout_marginBottom="11dp"-->
+<!--        app:srcCompat="@drawable/ic_menubook" />-->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/news4_pic" />
+
+        <TextView
+            android:id="@+id/tv_news2_title"
+            android:layout_width="144dp"
+            android:layout_height="107dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="185dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="3D Printed Reactor Core Makes Solar Fuel Production More Efficient"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_news3_title"
+            android:layout_width="152dp"
+            android:layout_height="103dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="350dp"
+            android:layout_toEndOf="@+id/imageView4"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Algae's Surprising Potential to Help Ease Climate Change Worries"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_news2_publish"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="463dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:fontFamily="@font/montserrat"
+            android:text="Published: Oct 27, 2023 11:30 AM"
+            android:textColor="#A1FFFFFF"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_news3_publish"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="293dp"
+            android:layout_toEndOf="@+id/imageView4"
+            android:fontFamily="@font/montserrat"
+            android:text="Published: Oct 25, 2023 10:45 PM"
+            android:textColor="#A1FFFFFF"
+            android:textSize="13sp" />
+
+        <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="164dp"
+        android:layout_height="144dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="2dp"
+        app:srcCompat="@drawable/news5_pic" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="165dp"
+        android:layout_height="150dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginBottom="-173dp"
+
+        app:srcCompat="@drawable/news6_pic" />
+    </RelativeLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+        <!--    jap lagi tgk
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/TBMainAct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"/>   -->
+
+<!--        <androidx.fragment.app.FragmentContainerView-->
+<!--            android:id="@+id/NHFMain"-->
+<!--            android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            app:defaultNavHost="true"-->
+<!--            app:navGraph="@navigation/nav_airmy"/>-->
+
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/bottom_nav_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:menu="@menu/bottom_menu"/>-->
+<!--    </LinearLayout>-->
+
+    </FrameLayout>
+</ScrollView>

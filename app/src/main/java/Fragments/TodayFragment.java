@@ -1,5 +1,7 @@
 package Fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.example.airmy.MainActivity;
@@ -48,6 +51,17 @@ public class TodayFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_today, container, false);
+        Button donateBttnForFlood = (Button) view.findViewById(R.id.donateBttnForFlood);
+
+        donateBttnForFlood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.redcrescent.org.my");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
 
         // Find the mapContainer FrameLayout
         FrameLayout mapContainer = view.findViewById(R.id.mapContainer);

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+    <item
+        android:id="@id/DestHome"
+        android:icon="@drawable/ic_homepage"
+        android:title="Home"/>  -->
+
+    <item
+        android:id="@id/DestNewsPage1"
+        android:icon="@drawable/ic_menubook"
+        android:title="News"/>
+
+    <item
+        android:id="@id/DestUserProfile"
+        android:icon="@drawable/ic_user_profile"
+        android:title="Profile"/>
+
+</menu>
