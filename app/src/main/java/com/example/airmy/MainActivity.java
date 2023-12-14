@@ -58,13 +58,15 @@ public class MainActivity extends AppCompatActivity {
         news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                final NewsPage n = new NewsPage();
+                goToNextActivity(n);
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                final SettingsPage s = new SettingsPage();
+                goToNextActivity(s);
             }
         });
 

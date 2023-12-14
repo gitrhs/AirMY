@@ -6,4 +6,9 @@
     <color name="tabBackgroundSelected">#636366</color>
     <color name="tabBackgroundUnSelected">#1c1c1f</color>
     <color name="clothesColor">#3F3F43</color>
+    <color name="dark_grey">#1C1C1E</color>
+    <color name="light_grey">#636366</color>
+    <color name="orange">#D0843D</color>
+    <color name="blue">#0B2C6C</color>
+
 </resources>

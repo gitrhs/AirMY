@@ -21,8 +21,14 @@
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            app:cardCornerRadius="20dp"
-            >
+
+            app:cardCornerRadius="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/blue_gradient">
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/locationtdyCard"
@@ -31,6 +37,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/rounded_text"
+                android:textColor="@color/white"
                 android:paddingLeft="35dp"
                 android:paddingTop="3dp"
                 android:paddingRight="35dp"
@@ -59,6 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="315dp"
+                android:textColor="@color/white"
                 android:layout_marginTop="23dp"
                 android:text="Clear"
                 android:textSize="17dp"
@@ -68,10 +76,10 @@
                 android:id="@+id/catiountdyCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="270dp"
+                android:layout_marginLeft="250dp"
                 android:layout_marginTop="8dp"
                 android:text="*No cautions as for now"
-                android:textSize="8dp"/>
+                android:textSize="10dp" />
 
             <ImageView
                 android:id="@+id/moonsvg"
@@ -88,6 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="28dp"
                 android:layout_marginTop="70dp"
+                android:textColor="@color/white"
                 android:text="30°C"
                 android:textSize="70dp" />
 
@@ -132,9 +141,6 @@
                 android:src="@drawable/arrow_right_svgrepo_com" />
 
 
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -142,13 +148,14 @@
 
                 <View
                     android:layout_width="315dp"
-                    android:layout_height="0.5dp"
+                    android:layout_height="1dp"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="180dp"
                     android:background="#FFFFFF" />
 
-
             </LinearLayout>
+
+
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -386,15 +393,16 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/donateBttnForFlood"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="265dp"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#F6E338"
-                android:text="Donate"
+
                 android:textStyle="bold"
-                android:theme="@style/Theme.Material3.Dark" />
+                android:theme="@style/Theme.Material3.Dark"
+                android:text="Donate"/>/>
 
 
         </com.google.android.material.card.MaterialCardView>

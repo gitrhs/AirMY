@@ -5,13 +5,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import Fragments.SevenDaysFragment;
-import Fragments.TodayFragment;
+import Fragments.NewsPage1Fragment;
+import Fragments.NewsPage2Fragment;
 
-public class ViewPageSwitcher extends FragmentStateAdapter {
+public class ViewPageSwitcher2 extends FragmentStateAdapter {
 
 
-    public ViewPageSwitcher(@NonNull FragmentActivity fragmentActivity) {
+    public ViewPageSwitcher2(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
 
@@ -20,11 +20,11 @@ public class ViewPageSwitcher extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return new TodayFragment();
+                return new NewsPage1Fragment();
             case 1:
-                return new SevenDaysFragment();
+                return new NewsPage2Fragment();
             default:
-                return new TodayFragment();
+                return new NewsPage1Fragment();
         }
 
     }
