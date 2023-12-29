@@ -28,77 +28,92 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:background="@drawable/blue_gradient">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="180dp"
+                        android:background="#FFFFFF" />
+
+                </LinearLayout>
             </LinearLayout>
 
                 <TextView
-                    android:id="@+id/locationtdyCard"
+                    android:id="@+id/rainChance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/rounded_text"
                     android:textColor="@color/white"
-                    android:paddingLeft="35dp"
+                    android:paddingLeft="15dp"
                     android:paddingTop="3dp"
-                    android:paddingRight="35dp"
+                    android:paddingRight="15dp"
                     android:paddingBottom="3dp"
-                    android:text="KL"
+                    android:drawableLeft="@drawable/rainpossibility"
+                    android:drawablePadding="2dp"
+                    android:text="10%"
                     android:textSize="17dp" />
 
                 <TextView
-                    android:id="@+id/highTemptdy"
+                    android:id="@+id/Ctemptdy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="335dp"
+                    android:drawableLeft="@drawable/temperature"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="15dp"
                     android:layout_marginTop="90dp"
-                    android:text="24°" />
+                    android:text="24°C" />
 
                 <TextView
-                    android:id="@+id/lowTemptday"
+                    android:id="@+id/FLTemptday"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="335dp"
+                    android:drawableLeft="@drawable/temperature_feels_like"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="15dp"
+                    android:drawablePadding="4dp"
                     android:layout_marginTop="130dp"
-                    android:text="17°" />
+                    android:text="17°C" />
 
-                <TextView
-                    android:id="@+id/weathertdyCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="315dp"
-                    android:textColor="@color/white"
-                    android:layout_marginTop="23dp"
-                    android:text="Clear"
-                    android:textSize="17dp"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/weathertdyCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:textAlignment="viewEnd"
+                android:layout_marginTop="23dp"
+                android:text="Partial Cloudy"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/catiountdyCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="8dp"
-                    android:text="*No cautions as for now"
-                    android:textSize="10dp" />
-
-                <ImageView
-                    android:id="@+id/moonsvg"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="290dp"
-                    android:layout_marginTop="25dp"
-                    android:src="@drawable/moon_svgrepo" />
+            <TextView
+                android:id="@+id/userLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="12dp"
+                android:text="Kuala Lumpur"
+                android:textAlignment="viewEnd"
+                android:textSize="12dp" />
 
 
-                <TextView
-                    android:id="@+id/temptdyCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="28dp"
-                    android:layout_marginTop="70dp"
-                    android:textColor="@color/white"
-                    android:text="30°C"
-                    android:textSize="70dp" />
+            <TextView
+                android:id="@+id/temptdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="-°C"
+                android:textColor="@color/white"
+                android:textSize="70dp" />
 
                 <TextView
                     android:id="@+id/windspeedtdyCard"
@@ -106,21 +121,30 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="230dp"
+                    android:drawableLeft="@drawable/wind"
+                    android:drawablePadding="4dp"
                     android:text="4 m/s" />
-
-                <TextView
-                    android:id="@+id/detailstdyCard"
-                    android:layout_width="wrap_content"
+                <FrameLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="290dp"
                     android:layout_marginTop="230dp"
-                    android:text="Details" />
+                    >
+                    <TextView
+                        android:id="@+id/detailstdyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Details >"
+                        android:textAlignment="textEnd"
+                        android:layout_marginRight="15dp"
+                        />
+                </FrameLayout>
 
                 <TextView
-                    android:id="@+id/unkownmmtdyCard"
+                    android:id="@+id/precip_mmCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="320dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="15dp"
                     android:layout_marginTop="198dp"
                     android:text="0 mm" />
 
@@ -130,30 +154,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="200dp"
-                    android:text="30%" />
+                    android:text="30%"
+                    android:drawableLeft="@drawable/humidity"/>
 
-                <ImageView
-                    android:id="@+id/arrowtdyCard"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="335dp"
-                    android:layout_marginTop="230dp"
-                    android:src="@drawable/arrow_right_svgrepo_com" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <View
-                        android:layout_width="315dp"
-                        android:layout_height="1dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="180dp"
-                        android:background="#FFFFFF" />
-
-                </LinearLayout>
 
 
 
@@ -176,44 +179,47 @@
             <ImageView
                 android:id="@+id/maskSvg"
                 android:layout_width="70dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
                 android:layout_height="70dp"
-                android:layout_marginLeft="280dp"
+                android:textAlignment="viewEnd"
                 android:layout_marginTop="30dp"
                 android:src="@drawable/masksvg" />
 
             <TextView
                 android:id="@+id/maskRequiry"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
+                android:layout_gravity="end"
+                android:gravity="center"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="280dp"
                 android:layout_marginTop="105dp"
                 android:text="Mask Required"
-                android:textSize="10.5dp" />
+                android:textSize="12dp" />
 
             <TextView
                 android:id="@+id/healthEffictsToday"
-                android:layout_width="170dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="95dp"
-                android:layout_marginTop="105dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
                 android:gravity="center_horizontal"
                 android:text="Okay, but sensitive individuals may experience minor health effects"
                 android:textSize="8dp" />
 
             <TextView
                 android:id="@+id/AirQualityTextOnlyToday"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="135dp"
+                android:textAlignment="center"
                 android:layout_marginTop="10dp"
-                android:text="Air Quality:"
+                android:text="Air Quality"
                 android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/airqualityTextRateToday"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="140dp"
+                android:textAlignment="center"
                 android:layout_marginTop="72dp"
                 android:text="Moderate"
                 android:textColor="#FF9800"
@@ -221,9 +227,9 @@
 
             <TextView
                 android:id="@+id/airqualityNumberToday"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="160dp"
+                android:textAlignment="center"
                 android:layout_marginTop="40dp"
                 android:text="64"
                 android:textSize="24dp" />
@@ -256,6 +262,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+                <WebView
+                    android:id="@+id/leafletWebView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -384,10 +394,10 @@
 
             <TextView
                 android:id="@+id/dontationText"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="25dp"
+                android:layout_gravity="center_vertical"
                 android:text="Help flood victims with just one tap!"
                 android:textSize="15dp"
                 android:textStyle="bold" />
@@ -396,7 +406,8 @@
                 android:id="@+id/donateBttnForFlood"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="265dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#F6E338"
 
