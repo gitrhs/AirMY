@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- First CARD -->
+        <com.google.android.material.card.MaterialCardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            app:cardCornerRadius="10dp">
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_text"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="3dp"
+                android:layout_marginStart="20dp"
+                android:text="KL"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/dayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Today"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/weatherTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="20dp"
+                android:text="Clear"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tempTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="70dp"
+                android:text="30°C"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/windspeedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="100dp"
+                android:text="4 m/s" />
+
+            <TextView
+                android:id="@+id/humidityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="100dp"
+                android:text="94%"
+                />
+
+            <TextView
+                android:id="@+id/precipTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="70dp"
+                android:text="0 mm" />
+
+            <TextView
+                android:id="@+id/feelsLikeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="175dp"
+                android:layout_marginTop="70dp"
+                android:text="30%" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="75dp"
+                    android:background="#FFFFFF" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>

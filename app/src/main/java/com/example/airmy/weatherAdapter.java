@@ -34,6 +34,16 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.WeatherV
         holder.locationTextView.setText(weatherData.getLocation());
         holder.dayTextView.setText(weatherData.getDay());
         holder.weatherTextView.setText(weatherData.getWeather());
+        holder.tempTextView.setText(weatherData.getTemp());
+        //windspeedTextView
+        holder.windspeedTextView.setText(weatherData.getWindspeed());
+        //humidityTextView
+        holder.humidityTextView.setText(weatherData.getHumidity());
+        //precipTextView
+        holder.precipTextView.setText(weatherData.getPrecip());
+        //feelsLikeTextView
+        holder.feelsLikeTextView.setText(weatherData.getFeelsLike());
+
         // Bind other data as needed
     }
 
@@ -47,6 +57,11 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.WeatherV
         TextView locationTextView;
         TextView dayTextView;
         TextView weatherTextView;
+        TextView tempTextView;
+        TextView windspeedTextView;
+        TextView humidityTextView;
+        TextView precipTextView;
+        TextView feelsLikeTextView;
 
         // Add other UI elements as needed
 
@@ -56,6 +71,13 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.WeatherV
             locationTextView = itemView.findViewById(R.id.locationTextView);
             dayTextView = itemView.findViewById(R.id.dayTextView);
             weatherTextView = itemView.findViewById(R.id.weatherTextView);
+
+            tempTextView = itemView.findViewById(R.id.tempTextView);
+            windspeedTextView = itemView.findViewById(R.id.windspeedTextView);
+            humidityTextView = itemView.findViewById(R.id.humidityTextView);
+
+            precipTextView = itemView.findViewById(R.id.precipTextView);
+            feelsLikeTextView = itemView.findViewById(R.id.feelsLikeTextView);
             // Initialize other UI elements
         }
     }

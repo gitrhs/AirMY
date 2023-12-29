@@ -1,47 +1,49 @@
 package Fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.airmy.R;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.airmy.R;
+import com.example.airmy.WeatherAdapter;
+import com.example.airmy.WeatherData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SevenDaysFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
+    private RecyclerView recyclerView;
+    private WeatherAdapter adapter;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public SevenDaysFragment() {
-        // Required empty public constructor
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_seven_days, container, false);
+
+        // Initialize the RecyclerView
+        recyclerView = view.findViewById(R.id.recyclerView);
+
+        // Create a list of WeatherData objects (customize this based on your needs)
+        List<WeatherData> weatherDataList = new ArrayList<>();
+        weatherDataList.add(new WeatherData("KL", "Today", "Raining", "30°C", "4 m/s", "94%", "0 mm", "30%"));
+        weatherDataList.add(new WeatherData("PJ", "Today", "Cloudy", "32°C", "5 m/s", "96%", "1 mm", "32%"));
+        // Add more WeatherData objects as needed
+
+        // Create and set the adapter
+        adapter = new WeatherAdapter(weatherDataList);
+        recyclerView.setAdapter(adapter);
+
+        // Optionally, you can set a layout manager (e.g., LinearLayoutManager)
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        return view;
     }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_seven_days, container, false);
-    }
-
-
 }

@@ -22,4 +22,35 @@ public class WeatherData {
     }
 
     // Add getters and setters as needed
+    public String getLocation() {
+        return location;
+    }
+
+    public String getDay() {
+        return day;
+    }
+
+    public String getWeather() {
+        return weather;
+    }
+
+    public String getTemp() {
+        return temp;
+    }
+
+    public String getWindspeed() {
+        return windspeed;
+    }
+
+    public String getHumidity() {
+        return humidity;
+    }
+
+    public String getPrecip() {
+        return precip;
+    }
+
+    public String getFeelsLike() {
+        return feelsLike;
+    }
 }
