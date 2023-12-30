@@ -31,18 +31,18 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.WeatherV
         WeatherData weatherData = weatherDataList.get(position);
 
         // Bind data to your UI elements in the ViewHolder
-        holder.locationTextView.setText(weatherData.getLocation());
+        holder.dailyChanceOfRain.setText(weatherData.getdailyChanceOfRain());
         holder.dayTextView.setText(weatherData.getDay());
         holder.weatherTextView.setText(weatherData.getWeather());
         holder.tempTextView.setText(weatherData.getTemp());
-        //windspeedTextView
-        holder.windspeedTextView.setText(weatherData.getWindspeed());
+        //maxWidthTextView
+        holder.maxTempTextView.setText(weatherData.getMaxTemp());
         //humidityTextView
         holder.humidityTextView.setText(weatherData.getHumidity());
         //precipTextView
-        holder.precipTextView.setText(weatherData.getPrecip());
+        holder.minTempTextView.setText(weatherData.getMinTemp());
         //feelsLikeTextView
-        holder.feelsLikeTextView.setText(weatherData.getFeelsLike());
+        holder.uvTextView.setText(weatherData.getUV());
 
         // Bind other data as needed
     }
@@ -54,30 +54,30 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.WeatherV
 
     // ViewHolder class
     public static class WeatherViewHolder extends RecyclerView.ViewHolder {
-        TextView locationTextView;
+        TextView dailyChanceOfRain;
         TextView dayTextView;
         TextView weatherTextView;
         TextView tempTextView;
-        TextView windspeedTextView;
+        TextView maxTempTextView;
         TextView humidityTextView;
-        TextView precipTextView;
-        TextView feelsLikeTextView;
+        TextView minTempTextView;
+        TextView uvTextView;
 
         // Add other UI elements as needed
 
         public WeatherViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            locationTextView = itemView.findViewById(R.id.locationTextView);
+            dailyChanceOfRain = itemView.findViewById(R.id.dailyChanceOfRain);
             dayTextView = itemView.findViewById(R.id.dayTextView);
             weatherTextView = itemView.findViewById(R.id.weatherTextView);
 
             tempTextView = itemView.findViewById(R.id.tempTextView);
-            windspeedTextView = itemView.findViewById(R.id.windspeedTextView);
+            maxTempTextView = itemView.findViewById(R.id.maxTempTextView);
             humidityTextView = itemView.findViewById(R.id.humidityTextView);
 
-            precipTextView = itemView.findViewById(R.id.precipTextView);
-            feelsLikeTextView = itemView.findViewById(R.id.feelsLikeTextView);
+            minTempTextView = itemView.findViewById(R.id.minTempTextView);
+            uvTextView = itemView.findViewById(R.id.uvTextView);
             // Initialize other UI elements
         }
     }

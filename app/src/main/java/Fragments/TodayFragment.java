@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.example.airmy.MainActivity;
 import com.example.airmy.R;
+import com.example.airmy.WeatherData;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -163,20 +164,58 @@ public class TodayFragment extends Fragment {
                 TextView weathertdyCard = view.findViewById(R.id.weathertdyCard);
                 weathertdyCard.setText(weatherCondition);
 
-                //precip_mmCard
-                double precip_mm = currentObject.getDouble("precip_mm");
-                TextView precip_mmCard = view.findViewById(R.id.precip_mmCard);
-                precip_mmCard.setText(precip_mm+" mm");
 
-                //Ctemptdy -> temp_c
-                int temp_c = currentObject.getInt("temp_c");
-                TextView Ctemptdy = view.findViewById(R.id.Ctemptdy);
-                Ctemptdy.setText(temp_c+"°C");
+
+
                 //FLTemptday -> feelslike_c
                 int feelslike_c = currentObject.getInt("feelslike_c");
                 TextView FLTemptday = view.findViewById(R.id.FLTemptday);
                 FLTemptday.setText(feelslike_c+"°C");
                 //get "rainChance"
+                String forecastString = mainActivity.getData("forecast_data", "");
+
+                try {
+                    JSONObject forecastData = new JSONObject(forecastString);
+                    JSONObject forecastArray = forecastData.getJSONObject("forecast");
+                    JSONArray forecastDayArray = forecastArray.getJSONArray("forecastday");
+
+                    JSONObject forecastDay = forecastDayArray.getJSONObject(0);
+                    JSONObject day = forecastDay.getJSONObject("day");
+
+                    double maxTempC = day.getDouble("maxtemp_c");
+                    double minTempC = day.getDouble("mintemp_c");
+                    int dailyChanceOfRain = day.getInt("daily_chance_of_rain");
+                    int uvNum = currentObject.getInt("uv");
+                    String uvText;
+                    if (uvNum <=2){
+                        uvText = "Low";
+                    } else if (uvNum <=5){
+                        uvText = "Moderate";
+                    } else if (uvNum <= 7){
+                        uvText = "High";
+                    } else if (uvNum <= 10){
+                        uvText = "Very High";
+                    } else {
+                        uvText = "Extreme";
+                    }
+                    //save the rainChance
+                    TextView rainChance = view.findViewById(R.id.rainChance);
+                    rainChance.setText(String.format("%d%%", dailyChanceOfRain));
+
+                    //highTempTdy
+                    TextView highTempTdy = view.findViewById(R.id.highTempTdy);
+                    highTempTdy.setText(String.format("%.1f°C", maxTempC));
+
+                    //lowTempTdy
+                    TextView lowTempTdy = view.findViewById(R.id.lowTempTdy);
+                    lowTempTdy.setText(String.format("%.1f°C", minTempC));
+
+                    //uvCard
+                    TextView uvCard = view.findViewById(R.id.uvCard);
+                    uvCard.setText(uvText);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
 
 

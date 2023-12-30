@@ -59,6 +59,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.List;
 import Fragments.MapFragment;
@@ -79,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tab;
     ViewPager2 viewPage;
     ViewPageSwitcher switcherViewPage;
-
     private NotificationManagerCompat notifManager;
 
     // Declare the request queue and the shared preferences
@@ -324,13 +324,14 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("WeatherData", "forecast Data JSON: " + forecastData.toString());
 
                             //count the next day prediction
-
                             TabLayout tabLayout = findViewById(R.id.tabSwitcher);
                             TabLayout.Tab tab2 = tabLayout.getTabAt(1);
 
                             if (tab2 != null) {
                                 tab2.setText(numberOfForecastDays + " DAYS AHEAD");
                             }
+                            //save next day prediction
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

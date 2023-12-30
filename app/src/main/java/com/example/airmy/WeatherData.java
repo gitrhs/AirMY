@@ -1,29 +1,29 @@
 package com.example.airmy;
 
 public class WeatherData {
-    private String location;
+    private String dailyChanceOfRain;
     private String day;
     private String weather;
     private String temp;
-    private String windspeed;
+    private String maxTemp;
     private String humidity;
-    private String precip;
-    private String feelsLike;
+    private String minTemp;
+    private String uv;
 
-    public WeatherData(String location, String day, String weather, String temp, String windspeed, String humidity, String precip, String feelsLike) {
-        this.location = location;
+    public WeatherData(String dailyChanceOfRain, String day, String weather, String temp, String maxTemp, String humidity, String minTemp, String uv) {
+        this.dailyChanceOfRain = dailyChanceOfRain;
         this.day = day;
         this.weather = weather;
         this.temp = temp;
-        this.windspeed = windspeed;
+        this.maxTemp = maxTemp;
         this.humidity = humidity;
-        this.precip = precip;
-        this.feelsLike = feelsLike;
+        this.minTemp = minTemp;
+        this.uv = uv;
     }
 
     // Add getters and setters as needed
-    public String getLocation() {
-        return location;
+    public String getdailyChanceOfRain() {
+        return dailyChanceOfRain;
     }
 
     public String getDay() {
@@ -38,19 +38,19 @@ public class WeatherData {
         return temp;
     }
 
-    public String getWindspeed() {
-        return windspeed;
+    public String getMaxTemp() {
+        return maxTemp;
     }
 
     public String getHumidity() {
         return humidity;
     }
 
-    public String getPrecip() {
-        return precip;
+    public String getMinTemp() {
+        return minTemp;
     }
 
-    public String getFeelsLike() {
-        return feelsLike;
+    public String getUV() {
+        return uv;
     }
 }
