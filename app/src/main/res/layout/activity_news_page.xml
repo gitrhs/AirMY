@@ -15,9 +15,9 @@
 
                 <ImageView
                     android:id="@+id/homePageNews"
-                    android:layout_width="65dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="70dp"
-                    android:layout_marginLeft="45dp"
                     android:layout_marginBottom="1dp"
                     android:padding="15dp"
 
@@ -25,9 +25,9 @@
 
                 <ImageView
                     android:id="@+id/NewsNews"
-                    android:layout_width="65dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="70dp"
-                    android:layout_marginLeft="60dp"
                     android:layout_marginBottom="1dp"
                     android:padding="15dp"
 
@@ -35,9 +35,9 @@
 
                 <ImageView
                     android:id="@+id/SettingNews"
-                    android:layout_width="65dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="70dp"
-                    android:layout_marginLeft="60dp"
                     android:layout_marginBottom="1dp"
                     android:padding="15dp"
 
