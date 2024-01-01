@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         // Call the API and save the JSON file in cache/session
         callAPIAndSaveJSON();
         fetchAQI();
-
+        fetchNewsDataFromApi();
 
 
         // Bottom nav bar
@@ -361,8 +361,120 @@ public class MainActivity extends AppCompatActivity {
         // Add the JsonObjectRequest to the request queue
         requestQueue.add(jsonObjectRequest);
     }
+    private void fetchNewsDataFromApi() {
+        String BASE_URL = "https://api.reliefweb.int/v1/";
+        // Make the first API request (latest news)
+        String url1 = BASE_URL + "reports?appname=airmy&profile=list&preset=latest&slim=1&query%5Bvalue%5D=climate&query%5Boperator%5D=AND";
+        JsonObjectRequest request1 = new JsonObjectRequest(Request.Method.GET, url1, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        // Process the data from the response
+                        try {
+                            // Check if the "data" array exists in the response
+                            if (response.has("data")) {
+                                JSONArray dataArray = response.getJSONArray("data");
 
+                                // Iterate through the array and log each object
+                                for (int i = 0; i < 5; i++) {
+                                    JSONObject dataObject = dataArray.getJSONObject(i);
+                                    String id = dataObject.getString("id");
+                                    //save general
+                                    saveData("LN"+i, dataObject.toString());
+                                    //get content data
+                                    fetchNewsDataFromApi(id, "LNC"+i);
 
+                                }
+                            } else {
+                                Log.e("MainActivity", "No 'data' array found in the response");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // Handle error
+                    }
+                });
+
+        // Add the request to the RequestQueue.
+        requestQueue.add(request1);
+
+        // Make the second API request
+        String url2 = BASE_URL + "reports?appname=airmy&profile=list&preset=latest&slim=1&query%5Bvalue%5D=%28climate%29+AND+_exists_%3Aheadline&query%5Boperator%5D=AND";
+        JsonObjectRequest request2 = new JsonObjectRequest(Request.Method.GET, url2, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        // Process the data from the response
+                        try {
+                            // Check if the "data" array exists in the response
+                            if (response.has("data")) {
+                                JSONArray dataArray = response.getJSONArray("data");
+
+                                // Iterate through the array and log each object
+                                for (int i = 0; i < 5; i++) {
+                                    JSONObject dataObject = dataArray.getJSONObject(i);
+                                    String id = dataObject.getString("id");
+                                    //save general
+                                    saveData("HN"+i, dataObject.toString());
+                                    //get content data
+                                    fetchNewsDataFromApi(id, "HNC"+i);
+                                }
+                            } else {
+                                Log.e("MainActivity", "No 'data' array found in the response");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // Handle error
+                    }
+                });
+
+        // Add the request to the RequestQueue.
+        requestQueue.add(request2);
+    }
+
+    private void fetchNewsDataFromApi(String id, String saveName) {
+        String url = "https://api.reliefweb.int/v1/reports/"+id;
+        JsonObjectRequest request1 = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        // Process the data from the response
+                        try {
+                            // Check if the "data" array exists in the response
+                            if (response.has("data")) {
+                                JSONArray dataArray = response.getJSONArray("data");
+                                JSONObject dataContent = dataArray.getJSONObject(0);
+                                String bodyData = dataContent.getJSONObject("fields").getString("body");
+                                saveData(saveName, bodyData);
+                            } else {
+                                Log.e("newsContent", "No 'data' array found in the response");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // Handle error
+                    }
+                });
+
+        // Add the request to the RequestQueue.
+        requestQueue.add(request1);
+    }
 
 
 

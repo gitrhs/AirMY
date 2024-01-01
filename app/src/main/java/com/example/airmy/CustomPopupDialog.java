@@ -10,15 +10,17 @@ import com.example.airmy.R;
 
 public class CustomPopupDialog extends Dialog {
 
-    private TextView titleTextView;
+    private TextView titleTextView, textViewInformation, textViewContent;
 
     public CustomPopupDialog(Context context) {
         super(context);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.popup_layout); // Use your popup layout file
+        setContentView(R.layout.popup_layout);
 
         // Initialize the contentTextView
-        titleTextView = findViewById(R.id.textViewTitle); // Use the actual ID in your popup layout
+        titleTextView = findViewById(R.id.textViewTitle);
+        textViewInformation = findViewById(R.id.textViewInformation);
+        textViewContent = findViewById(R.id.textViewContent);
         findViewById(R.id.button_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +37,12 @@ public class CustomPopupDialog extends Dialog {
 
     public void setTitle(String title) {
         titleTextView.setText(title);
+    }
+    public void setDesc(String desc) {
+        textViewInformation.setText(desc);
+    }
+    public void setContent(String content) {
+        textViewContent.setText(content);
     }
     @Override
     public void onBackPressed() {

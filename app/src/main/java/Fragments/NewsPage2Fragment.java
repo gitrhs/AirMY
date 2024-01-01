@@ -5,10 +5,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.airmy.NewsPage;
 import com.example.airmy.R;
 import com.google.android.material.card.MaterialCardView;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.widget.TextView;
+
 import com.example.airmy.CustomPopupDialog;
 public class NewsPage2Fragment extends Fragment {
 
@@ -45,19 +49,53 @@ public class NewsPage2Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        NewsPage newsPage = (NewsPage) getActivity();
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_news_page2, container, false);
+        //call save data to get the data first:
+        String[] c1 = newsPage.parseTheJson(newsPage.getData("HN0", ""));
+        String[] c2 = newsPage.parseTheJson(newsPage.getData("HN1", ""));
+        String[] c3 = newsPage.parseTheJson(newsPage.getData("HN2", ""));
+        String[] c4 = newsPage.parseTheJson(newsPage.getData("HN3", ""));
+        String[] c5 = newsPage.parseTheJson(newsPage.getData("HN4", ""));
+
+        //change the title
+        TextView tv_news1_title = view.findViewById(R.id.tv_news1_title);
+        tv_news1_title.setText(c1[1]);
+        TextView tv_news2_title = view.findViewById(R.id.tv_news2_title);
+        tv_news2_title.setText(c2[1]);
+        TextView tv_news3_title = view.findViewById(R.id.tv_news3_title);
+        tv_news3_title.setText(c3[1]);
+        TextView tv_news4_title = view.findViewById(R.id.tv_news4_title);
+        tv_news4_title.setText(c4[1]);
+        TextView tv_news5_title = view.findViewById(R.id.tv_news5_title);
+        tv_news5_title.setText(c5[1]);
+        //change the publish tv_news1_publish
+        TextView tv_news1_publish = view.findViewById(R.id.tv_news1_publish);
+        tv_news1_publish.setText("Published at "+ c1[4]+ ", " + c1[3]+"\nSource: "+c1[2]);
+        TextView tv_news2_publish = view.findViewById(R.id.tv_news2_publish);
+        tv_news2_publish.setText("Published at "+ c2[4]+ ", " + c2[3]+"\nSource: "+c2[2]);
+        TextView tv_news3_publish = view.findViewById(R.id.tv_news3_publish);
+        tv_news3_publish.setText("Published at "+ c3[4]+ ", " + c3[3]+"\nSource: "+c3[2]);
+        TextView tv_news4_publish = view.findViewById(R.id.tv_news4_publish);
+        tv_news4_publish.setText("Published at "+ c4[4]+ ", " + c4[3]+"\nSource: "+c4[2]);
+        TextView tv_news5_publish = view.findViewById(R.id.tv_news5_publish);
+        tv_news5_publish.setText("Published at "+ c5[4]+ ", " + c5[3]+"\nSource: "+c5[2]);
 
         // Find the MaterialCardViews by ID
         MaterialCardView cardView1 = view.findViewById(R.id.view_news1);
         MaterialCardView cardView2 = view.findViewById(R.id.view_news2);
+        MaterialCardView cardView3 = view.findViewById(R.id.view_news3);
+        MaterialCardView cardView4 = view.findViewById(R.id.view_news4);
+        MaterialCardView cardView5 = view.findViewById(R.id.view_news5);
 
+        //change the d
         // Set click listeners for the MaterialCardViews
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Show the modal popup with content for news 1
-                showPopup("A Suistainable Alternative to Air Conditioning");
+                showPopup("HNC0", c1);
             }
         });
 
@@ -65,16 +103,41 @@ public class NewsPage2Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Show the modal popup with content for news 2
-                showPopup("This is news 2");
+                showPopup("HNC1", c2);
+            }
+        });
+        cardView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show the modal popup with content for news 3
+                showPopup("HNC2", c3);
+            }
+        });
+
+        cardView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show the modal popup with content for news 4
+                showPopup("HNC3", c4);
+            }
+        });
+        cardView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Show the modal popup with content for news 5
+                showPopup("HNC4", c5);
             }
         });
 
         return view;
     }
 
-    private void showPopup(String title) {
+    private void showPopup(String contentName, String[] data) {
         CustomPopupDialog customPopupDialog = new CustomPopupDialog(requireContext());
-        customPopupDialog.setTitle(title); // Set the dynamic content
+        NewsPage newsPage = (NewsPage) getActivity();
+        customPopupDialog.setTitle(data[1]); // Set the dynamic content
+        customPopupDialog.setDesc("Published in "+ data[4]+ ", " + data[3]+"\nSource: "+data[2]);
+        customPopupDialog.setContent(newsPage.getData(contentName, ""));
         customPopupDialog.show();
     }
 }
