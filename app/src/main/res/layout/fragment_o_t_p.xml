@@ -1,0 +1,154 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/resendCode"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="Fragments.OTPFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/otpFragmentRelativeLayout">
+
+        <EditText
+            android:id="@+id/OTPFirst"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/credentials_rounded_edittext"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/very_light_greyOTP"
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/OTPSecond"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/credentials_rounded_edittext"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColor="@color/black"
+            android:selectAllOnFocus="true"
+            android:textColorHint="@color/very_light_greyOTP"
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/OTPThird"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="215dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/credentials_rounded_edittext"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/very_light_greyOTP"
+            android:textSize="35dp" />
+
+        <EditText
+            android:id="@+id/OTPFourth"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="310dp"
+            android:layout_marginTop="280dp"
+            android:background="@drawable/credentials_rounded_edittext"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColor="@color/black"
+            android:selectAllOnFocus="true"
+            android:textColorHint="@color/very_light_greyOTP"
+            android:textSize="35dp"
+            tools:hint="0" />
+
+        <Button
+            android:id="@+id/verifyCode"
+            style="@style/loginButton"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/bttn_login_rounded"
+            android:backgroundTint="@color/buttonLogin"
+            android:text="Verify Code"
+            android:textColor="@color/credential_white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="OTP Verification"
+            android:textColor="@color/credential_white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="92dp"
+            android:layout_marginBottom="170dp"
+            android:text="Didn't Recieve Code?"
+            android:textColor="@color/credential_white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/resendOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="86dp"
+            android:layout_marginBottom="170dp"
+            android:text="Resend"
+            android:textColor="#2EAAA9"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_btn_rounded"
+
+            android:padding="10dp"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="341dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="200dp"
+            android:text="Enter the verification code we just sent on your email address"
+            android:textColor="@color/credential_white"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/otpFragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

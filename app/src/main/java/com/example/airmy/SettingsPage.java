@@ -33,38 +33,38 @@ public class SettingsPage extends AppCompatActivity {
         setContentView(R.layout.activity_settings_page);
 
 
-
-        // Bottom nav bar
-        final ImageView home = findViewById(R.id.homePageSettings);
-        final ImageView news = findViewById(R.id.NewsSettings);
-        final ImageView settings = findViewById(R.id.SettingSettings);
-
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SettingsPage.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
-                startActivity(intent);
-
-            }
-        });
-        news.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SettingsPage.this, NewsPage.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
-
-                startActivity(intent);
-            }
-        });
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SettingsPage.this, SettingsPage.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
-
-                startActivity(intent);
-            }
-        });
+//
+//        // Bottom nav bar
+//        final ImageView home = findViewById(R.id.homePageSettings);
+//        final ImageView news = findViewById(R.id.NewsSettings);
+//        final ImageView settings = findViewById(R.id.SettingSettings);
+//
+//        home.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(SettingsPage.this, MainActivity.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+//                startActivity(intent);
+//
+//            }
+//        });
+//        news.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(SettingsPage.this, NewsPage.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+//
+//                startActivity(intent);
+//            }
+//        });
+//        settings.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(SettingsPage.this, SettingsPage.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+//
+//                startActivity(intent);
+//            }
+//        });
     }
 }

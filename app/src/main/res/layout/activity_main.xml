@@ -18,28 +18,43 @@
             android:id="@+id/homePage"
             android:layout_width="65dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
+
             app:srcCompat="@drawable/house_clicked" />
 
+
         <ImageView
-            android:id="@+id/newss"
+            android:id="@+id/newsPage"
             android:layout_width="65dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="35dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
+
             app:srcCompat="@drawable/news_unclicked" />
 
         <ImageView
-            android:id="@+id/setting"
+            android:id="@+id/healthRecPage"
             android:layout_width="65dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginBottom="1dp"
-            android:padding="15dp"
-            app:srcCompat="@drawable/settings_unclicked" />
+            android:padding="12dp"
+            app:tint="@color/credential_white"
+            app:srcCompat="@drawable/heart_not_filled" />
+
+        <ImageView
+            android:id="@+id/userPage"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="1dp"
+            android:padding="12dp"
+            app:srcCompat="@drawable/user_not_filled"
+            app:tint="@color/credential_white" />
+
     </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
@@ -108,7 +123,7 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7 DAYS AHEAD" />
+                android:text="2 DAYS AHEAD" />
 
 
         </com.google.android.material.tabs.TabLayout>
