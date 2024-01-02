@@ -5,321 +5,221 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
+    <!-- latest climate news:
+    https://api.reliefweb.int/v1/reports?appname=airmy&profile=list&preset=latest&slim=1&query%5Bvalue%5D=climate&query%5Boperator%5D=AND
+    -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="Fragments.NewsPage1Fragment">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <!--        <View-->
-            <!--            android:id="@+id/view_latest"-->
-            <!--            android:layout_width="142dp"-->
-            <!--            android:layout_height="27dp"-->
-            <!--            android:layout_alignParentTop="true"-->
-            <!--            android:layout_alignParentEnd="true"-->
-            <!--            android:layout_marginTop="99dp"-->
-            <!--            android:layout_marginEnd="198dp"-->
-            <!--            android:background="@drawable/bg_latest" />-->
-
-            <!--        <View-->
-            <!--            android:id="@+id/view_topthisweek"-->
-            <!--            android:layout_width="142dp"-->
-            <!--            android:layout_height="27dp"-->
-            <!--            android:layout_alignParentTop="true"-->
-            <!--            android:layout_alignParentEnd="true"-->
-            <!--            android:layout_marginTop="99dp"-->
-            <!--            android:layout_marginEnd="56dp"-->
-            <!--            android:background="@drawable/bg_topthisweek"></View>-->
-
-            <!--        <TextView-->
-            <!--            android:id="@+id/tv_news"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_alignParentStart="true"-->
-            <!--            android:layout_alignParentTop="true"-->
-            <!--            android:layout_alignParentEnd="true"-->
-            <!--            android:layout_marginStart="157dp"-->
-            <!--            android:layout_marginTop="30dp"-->
-            <!--            android:layout_marginEnd="150dp"-->
-            <!--            android:fontFamily="@font/montserrat_bold"-->
-            <!--            android:text="News"-->
-            <!--            android:textColor="#FFFFFF"-->
-            <!--            android:textSize="34sp"-->
-            <!--            android:textStyle="bold" />-->
-
-            <!--        <TextView-->
-            <!--            android:id="@+id/tv_topthisweek"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_alignParentTop="true"-->
-            <!--            android:layout_alignParentEnd="true"-->
-            <!--            android:layout_marginTop="101dp"-->
-            <!--            android:layout_marginEnd="70dp"-->
-            <!--            android:fontFamily="@font/montserrat"-->
-            <!--            android:text="TOP THIS WEEK"-->
-            <!--            android:textColor="#FFFFFF" />-->
-
-            <!--        <TextView-->
-            <!--            android:id="@+id/tv_latest"-->
-            <!--            android:layout_width="wrap_content"-->
-            <!--            android:layout_height="wrap_content"-->
-            <!--            android:layout_alignParentTop="true"-->
-            <!--            android:layout_alignParentEnd="true"-->
-            <!--            android:layout_marginTop="101dp"-->
-            <!--            android:layout_marginEnd="241dp"-->
-            <!--            android:fontFamily="@font/montserrat"-->
-            <!--            android:text="LATEST"-->
-            <!--            android:textColor="#FFFFFF" />-->
-
-            <View
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/view_news1"
-                android:layout_width="340dp"
-                android:layout_height="152dp"
-                android:layout_marginStart="39dp"
-                android:layout_marginEnd="38dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/bg_firstnews"></View>
-
-            <TextView
-                android:id="@+id/tv_news1_publish"
-                android:layout_width="119dp"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="110dp"
-                android:layout_toEndOf="@+id/iv_news1"
-                android:fontFamily="@font/montserrat"
-                android:text="Published: Nov 2, 2023 12:48 PM"
-                android:textColor="#A1FFFFFF"
-                android:textSize="13sp" />
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/black">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_news1_title"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Hostilities in the Gaza Strip and Israel | Flash Update #81"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_news1_publish"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Published at 2023-12-30\nSource: UN Office for the Coordination of Humanitarian Affairs"
+                        android:textColor="#A1FFFFFF"
+                        android:textSize="13sp" />
 
-            <TextView
-                android:id="@+id/tv_news1_title"
-                android:layout_width="151dp"
-                android:layout_height="91dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="15dp"
-                android:layout_toEndOf="@+id/iv_news1"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Unhealthy Air Quality Recorded in 14 Areas As of Today"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp" />
-
-            <View
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/view_news2"
-                android:layout_width="339dp"
-                android:layout_height="145dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="63dp"
-                android:layout_marginTop="172dp"
-                android:layout_marginEnd="38dp"
-                android:background="@drawable/bg_firstnews" />
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/black">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_news2_title"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="WFP condemns theft of life-saving food from warehouse in Gezira State"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_news2_publish"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Published at 2023-12-28\nSource: World Food Programme"
+                        android:textColor="#A1FFFFFF"
+                        android:textSize="13sp" />
 
-            <View
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/view_news3"
-                android:layout_width="335dp"
-                android:layout_height="147dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="329dp"
-                android:layout_marginEnd="38dp"
-                android:background="@drawable/bg_firstnews" />
-
-            <View
-                android:id="@+id/view_emailaddress"
-                android:layout_width="334dp"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="37dp"
-                android:layout_marginTop="490dp"
-                android:layout_marginEnd="38dp"
-                android:background="@drawable/bg_firstnews" />
-
-            <EditText
-                android:id="@+id/et_enteremailaddress"
-                android:layout_width="216dp"
-                android:layout_height="48dp"
-                android:layout_alignStart="@+id/view_emailaddress"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="520dp"
-                android:background="@android:color/transparent"
-                android:ems="10"
-                android:fontFamily="@font/montserrat"
-                android:inputType="textEmailAddress"
-                android:text="Enter your email address"
-                android:textColor="#79FFFFFF"
-                android:textSize="16sp" />
-
-            <Button
-                android:id="@+id/btn_signup"
-                android:layout_width="wrap_content"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="520dp"
-                android:layout_marginRight="40dp"
-                android:backgroundTint="#3F51B5"
-                android:fontFamily="@font/montserrat"
-                android:paddingLeft="15dp"
-                android:paddingTop="3dp"
-                android:paddingRight="15dp"
-                android:paddingBottom="3dp"
-                android:text="Sign up"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/black">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_news3_title"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Hostilities in the Gaza Strip and Israel | Flash Update #81"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_news3_publish"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Published at 2023-12-30\nSource: UN Office for the Coordination of Humanitarian Affairs"
+                        android:textColor="#A1FFFFFF"
+                        android:textSize="13sp" />
 
-            <!--        <ImageView-->
-            <!--            android:id="@+id/iv_home"-->
-            <!--            android:layout_width="45dp"-->
-            <!--            android:layout_height="43dp"-->
-            <!--            android:layout_alignParentEnd="true"-->
-            <!--            android:layout_alignParentBottom="true"-->
-            <!--            android:layout_marginEnd="310dp"-->
-            <!--            android:layout_marginBottom="9dp"-->
-            <!--            app:srcCompat="@drawable/ic_homepage" />-->
-
-            <!--        <ImageView-->
-            <!--            android:id="@+id/iv_bookicon"-->
-            <!--            android:layout_width="41dp"-->
-            <!--            android:layout_height="40dp"-->
-            <!--            android:layout_alignParentEnd="true"-->
-            <!--            android:layout_alignParentBottom="true"-->
-            <!--            android:layout_marginEnd="183dp"-->
-            <!--            android:layout_marginBottom="11dp"-->
-            <!--            app:srcCompat="@drawable/ic_menubook" />-->
-
-            <!--        <ImageView-->
-            <!--            android:id="@+id/iv_user_profile"-->
-            <!--            android:layout_width="41dp"-->
-            <!--            android:layout_height="38dp"-->
-            <!--            android:layout_alignParentEnd="true"-->
-            <!--            android:layout_alignParentBottom="true"-->
-            <!--            android:layout_marginEnd="55dp"-->
-            <!--            android:layout_marginBottom="12dp"-->
-            <!--            app:srcCompat="@drawable/ic_user_profile" />-->
-
-            <ImageView
-                android:id="@+id/iv_news1"
-                android:layout_width="163dp"
-                android:layout_height="154dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="10dp"
-
-                app:srcCompat="@drawable/news1_pic" />
-
-            <ImageView
-                android:id="@+id/iv_news2"
-                android:layout_width="159dp"
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/view_news4"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/iv_news1"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="37dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="2dp"
-                app:srcCompat="@drawable/news2_pic" />
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/black">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_news4_title"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="WFP condemns theft of life-saving food from warehouse in Gezira State"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_news4_publish"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Published at 2023-12-28\nSource: World Food Programme"
+                        android:textColor="#A1FFFFFF"
+                        android:textSize="13sp" />
 
-            <ImageView
-                android:id="@+id/iv_news3"
-                android:layout_width="160dp"
-                android:layout_height="148dp"
-                android:layout_alignBottom="@+id/iv_news2"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="37dp"
-                android:layout_marginBottom="-153dp"
-                app:srcCompat="@drawable/news3_pic" />
-
-            <TextView
-                android:id="@+id/tv_news2_title"
-                android:layout_width="157dp"
-                android:layout_height="93dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="195dp"
-                android:layout_toEndOf="@+id/iv_news1"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Top 10 Strategies to Avoid Air Pollution: Read Now Here"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/tv_news3_title"
-                android:layout_width="152dp"
-                android:layout_height="107dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="355dp"
-                android:layout_toEndOf="@+id/iv_news1"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Breaking News: Air Quality Warnings Due to Unusual Weather Events"
-                android:textColor="#FFFFFF"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/tv_news2_publish"
-                android:layout_width="116dp"
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/view_news5"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="459dp"
-                android:layout_toEndOf="@+id/iv_news1"
-                android:fontFamily="@font/montserrat"
-                android:text="Published: Nov 5, 2023 11:48 PM"
-                android:textColor="#A1FFFFFF"
-                android:textSize="13sp" />
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/black">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_news5_title"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Hostilities in the Gaza Strip and Israel | Flash Update #81"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_news5_publish"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/imageView2"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Published at 2023-12-30\nSource: UN Office for the Coordination of Humanitarian Affairs"
+                        android:textColor="#A1FFFFFF"
+                        android:textSize="13sp" />
 
-            <TextView
-                android:id="@+id/tv_news3_publish"
-                android:layout_width="116dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="291dp"
-                android:layout_toEndOf="@+id/iv_news1"
-                android:fontFamily="@font/montserrat"
-                android:text="Published: Nov 4, 2023 10:45 PM"
-                android:textColor="#A1FFFFFF"
-                android:textSize="13sp" />
-        </RelativeLayout>
-
-        <!--    <LinearLayout-->
-        <!--        android:layout_width="match_parent"-->
-        <!--        android:layout_height="match_parent"-->
-        <!--        android:orientation="vertical">-->
-
-        <!--        &lt;!&ndash;    jap lagi tgk-->
-        <!--        <androidx.appcompat.widget.Toolbar-->
-        <!--            android:id="@+id/TBMainAct"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:background="?attr/colorPrimary"-->
-        <!--            android:minHeight="?attr/actionBarSize"/>   &ndash;&gt;-->
-
-        <!--        <androidx.fragment.app.FragmentContainerView-->
-        <!--            android:id="@+id/NHFMain"-->
-        <!--            android:name="androidx.navigation.fragment.NavHostFragment"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="0dp"-->
-        <!--            android:layout_weight="1"-->
-        <!--            app:defaultNavHost="true"-->
-        <!--            app:navGraph="@navigation/nav_airmy" />-->
-
-        <!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
-        <!--            android:id="@+id/bottom_nav_view"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:menu="@menu/bottom_menu" />-->
-        <!--    </LinearLayout>-->
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
 
     </FrameLayout>
 </ScrollView>

@@ -219,27 +219,27 @@
 
         <ImageView
             android:id="@+id/homePageSettings"
-            android:layout_width="65dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="45dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
             app:srcCompat="@drawable/house_unclicked" />
 
         <ImageView
             android:id="@+id/NewsSettings"
-            android:layout_width="65dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="60dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
             app:srcCompat="@drawable/news_unclicked" />
 
         <ImageView
             android:id="@+id/SettingSettings"
-            android:layout_width="65dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="60dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
             app:srcCompat="@drawable/settings_clicked" />

@@ -11,28 +11,47 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.util.Log;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class NewsPage extends AppCompatActivity {
     private ActionBarDrawerToggle toggle;
     private DrawerLayout drawerLayout;
+
+    private RequestQueue requestQueue;
     TabLayout tab;
     ViewPager2 viewPage;
     ViewPageSwitcher2 switcherViewPage;
+
+    public static final String PREF_NAME = "AirMY_SDGHeroes";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_page);
+        requestQueue = Volley.newRequestQueue(this);
 
         // Bottom nav bar
         final ImageView home = findViewById(R.id.homePageNews);
@@ -67,7 +86,10 @@ public class NewsPage extends AppCompatActivity {
             }
         });
 
-
+        String userLocation = getData("user_location", "Kuala Lumpur");
+        // Update the TextView with the user_location
+        TextView locationTextView = findViewById(R.id.locationTextId);
+        locationTextView.setText(userLocation);
 
 
         // Tab switching ( latest and this week )
@@ -132,7 +154,7 @@ public class NewsPage extends AppCompatActivity {
 //        setupNavMenu(navController);
     }
 
-//    private void setupNavMenu(NavController navController){
+    //    private void setupNavMenu(NavController navController){
 //        NavigationView sideNav = findViewById(R.id.sideNav);
 //        NavigationUI.setupWithNavController(sideNav, navController);
 //    }
@@ -158,11 +180,87 @@ public class NewsPage extends AppCompatActivity {
 //            return super.onOptionsItemSelected(item);
 //        }
 //    }
-public void goToNextActivity(AppCompatActivity o) {
-    Intent intent = new Intent(this, o.getClass());
-    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
-    startActivity(intent);
+
+    public void saveData(String name, String value) {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(name, value);
+        editor.apply();
+    }
+
+    public String getData(String name, String defaultValue) {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(name, defaultValue);
+    }
+    public String[] parseTheJson(String jsonText) {
+        try {
+            JSONObject jsonObject = new JSONObject(jsonText);
+
+            // Extracting values
+            String id = jsonObject.getString("id");
+            String title = jsonObject.getJSONObject("fields").getString("title");
+
+            // Navigate to the "source" array inside the "fields" object
+            JSONArray sourceArray = jsonObject.getJSONObject("fields").getJSONArray("source");
+
+            // Extract the first element from the "source" array
+            String sourceName = sourceArray.getJSONObject(0).getString("name");
+
+            // Navigate to the "date" object inside the top-level object
+            String createdDate = jsonObject.getJSONObject("fields").getJSONObject("date").getString("created");
+
+            //get country name
+            JSONArray countryArray = jsonObject.getJSONObject("fields").getJSONArray("country");
+            String countryName = countryArray.getJSONObject(0).getString("name");
+            // Return the values in an array
+            return new String[]{id, title, sourceName, createdDate, countryName};
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.e("parsejson error", e.toString());
+            Log.e("raw data", jsonText);
+        }
+
+        // Return null or handle error case if parsing fails
+        return new String[]{"id", "1", "2", "3"};
+    }
+    public void fetchNewsDataFromApi(String url) {
+        JsonObjectRequest request1 = new JsonObjectRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        // Process the data from the response
+                        try {
+                            // Check if the "data" array exists in the response
+                            if (response.has("data")) {
+                                JSONArray dataArray = response.getJSONArray("data");
+                                JSONObject dataContent = dataArray.getJSONObject(0);
+                                String bodyData = dataContent.getJSONObject("fields").getString("body");
+                                saveData("currentNewsContent", bodyData);
+                            } else {
+                                Log.e("newsContent", "No 'data' array found in the response");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // Handle error
+                    }
+                });
+
+        // Add the request to the RequestQueue.
+        requestQueue.add(request1);
+    }
+
+    public void goToNextActivity(AppCompatActivity o) {
+        Intent intent = new Intent(this, o.getClass());
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+        startActivity(intent);
 
 
-}
+    }
 }
