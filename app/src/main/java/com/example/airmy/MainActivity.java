@@ -1,10 +1,11 @@
 package com.example.airmy;
+
 import android.Manifest;
+import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.app.NotificationCompat;
+//@@ -9,51 +9,109 @@
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -33,7 +34,6 @@ import android.widget.TextView;
 import android.widget.Toolbar;
 import android.os.Looper;
 import androidx.annotation.NonNull;
-
 import com.android.volley.toolbox.StringRequest;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -43,29 +43,24 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.tabs.TabLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Locale;
 import java.util.List;
 import Fragments.MapFragment;
 import Fragments.TodayFragment;
 import kotlin.text.Charsets;
-
 //to call the api
 import com.android.volley.Cache;
 import com.android.volley.Request;
@@ -74,15 +69,19 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.tabs.TabLayout;
+
 
 public class MainActivity extends AppCompatActivity {
-    private LocationManager locationManager;
+
     TabLayout tab;
     ViewPager2 viewPage;
     ViewPageSwitcher switcherViewPage;
-    private NotificationManagerCompat notifManager;
 
-    // Declare the request queue and the shared preferences
+    SharedPreferences sharePref;
+    private NotificationManagerCompat notifManager;
+    private LocationManager locationManager;
+
     private RequestQueue requestQueue;
     private SharedPreferences sharedPreferences;
 
@@ -96,29 +95,12 @@ public class MainActivity extends AppCompatActivity {
 
         notifManager = NotificationManagerCompat.from(this);
 
-        // Initialize the request queue and the shared preferences
-        requestQueue = Volley.newRequestQueue(this);
-        sharedPreferences = getSharedPreferences("json_data", MODE_PRIVATE);
-        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // Request permissions if not granted
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
-        } else {
-            // Start location updates if permissions are granted
-            //check first if there is cache "user_location"
-                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-        }
-        // Call the API and save the JSON file in cache/session
-        callAPIAndSaveJSON();
-        fetchAQI();
-        fetchNewsDataFromApi();
-
 
         // Bottom nav bar
         final ImageView home = findViewById(R.id.homePage);
-        final ImageView news = findViewById(R.id.newss);
-        final ImageView settings = findViewById(R.id.setting);
+        final ImageView news = findViewById(R.id.newsPage);
+        final ImageView healthRec = findViewById(R.id.healthRecPage);
+        final ImageView userPage = findViewById(R.id.userPage);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,14 +118,42 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        settings.setOnClickListener(new View.OnClickListener() {
+        healthRec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SettingsPage.class);
+                Intent intent = new Intent(MainActivity.this, WelcomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
                 startActivity(intent);
             }
         });
+        userPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UserProfileAcitivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+                startActivity(intent);
+            }
+        });
+
+        // API STUFF
+        requestQueue = Volley.newRequestQueue(this);
+        sharedPreferences = getSharedPreferences("json_data", MODE_PRIVATE);
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // Request permissions if not granted
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+        } else {
+            // Start location updates if permissions are granted
+            //check first if there is cache "user_location"
+            locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+        }
+        // Call the API and save the JSON file in cache/session
+        callAPIAndSaveJSON();
+        fetchAQI();
+        fetchNewsDataFromApi();
+
+
 
         // Tabs switching " 7 day "
         tab = findViewById(R.id.tabSwitcher);
@@ -177,7 +187,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
     }
+
     public void saveData(String name, String value) {
         SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -324,6 +336,7 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("WeatherData", "forecast Data JSON: " + forecastData.toString());
 
                             //count the next day prediction
+
                             TabLayout tabLayout = findViewById(R.id.tabSwitcher);
                             TabLayout.Tab tab2 = tabLayout.getTabAt(1);
 
@@ -478,28 +491,95 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-// notification system " still work on progress don't mind it "
-    public void notify(String text) {
-        Notification notification = new NotificationCompat.Builder(this, NotificationManagment.channel1)
-                .setSmallIcon(R.drawable.airmy_launcher_background)
-                .setContentTitle("AirMy")
-                .setContentText(text)
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
-                .build();
 
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        notifManager.notify(1, notification);
-    }
+
+
+
+//    private void askNotificationPermission() {
+//        // This is only necessary for API level >= 33 (TIRAMISU)
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+//            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) ==
+//                    PackageManager.PERMISSION_GRANTED) {
+//                // FCM SDK (and your app) can post notifications.
+//            } else if (shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS)) {
+//                // TODO: display an educational UI explaining to the user the features that will be enabled
+//                //       by them granting the POST_NOTIFICATION permission. This UI should provide the user
+//                //       "OK" and "No thanks" buttons. If the user selects "OK," directly request the permission.
+//                //       If the user selects "No thanks," allow the user to continue without notifications.
+//            } else {
+//                // Directly ask for the permission
+//                requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+//            }
+//        }
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// notification system " still work on progress don't mind it "
+//    public void notify(String text) {
+//        Notification notification = new NotificationCompat.Builder(this, NotificationManagment.channel1)
+//                .setSmallIcon(R.drawable.airmy_launcher_background)
+//                .setContentTitle("AirMy")
+//                .setContentText(text)
+//                .setPriority(NotificationCompat.PRIORITY_HIGH)
+//                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+//                .build();
+//
+//        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+//            // TODO: Consider calling
+//            //    ActivityCompat#requestPermissions
+//            // here to request the missing permissions, and then overriding
+//            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//            //                                          int[] grantResults)
+//            // to handle the case where the user grants the permission. See the documentation
+//            // for ActivityCompat#requestPermissions for more details.
+//            return;
+//        }
+//        notifManager.notify(1, notification);
+//    }
 
 
 

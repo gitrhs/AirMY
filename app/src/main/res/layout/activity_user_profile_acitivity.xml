@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileAcitivity">
+
+    <ImageView
+        android:id="@+id/userBackground"
+        android:layout_width="match_parent"
+        android:layout_height="238dp"
+        android:layout_marginBottom="200dp"
+        app:srcCompat="@drawable/kuala_lumpur_skyline_at_dusk_1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/homePage"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="1dp"
+            android:padding="15dp"
+
+            app:srcCompat="@drawable/house_unclicked" />
+
+
+        <ImageView
+            android:id="@+id/newsPage"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="1dp"
+            android:padding="15dp"
+
+            app:srcCompat="@drawable/news_unclicked" />
+
+        <ImageView
+            android:id="@+id/healthRecPage"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="1dp"
+            android:padding="12dp"
+            app:tint="@color/credential_white"
+            app:srcCompat="@drawable/heart_not_filled" />
+
+        <ImageView
+            android:id="@+id/userPage"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="1dp"
+            android:padding="12dp"
+            app:srcCompat="@drawable/user_filled"
+            app:tint="@color/credential_white" />
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="140dp"
+        android:background="@color/black"
+        app:cardCornerRadius="100dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/userPic"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:srcCompat="@drawable/abc3e8efa9824b4be6ac6cae18fb7abd" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="275dp"
+        android:text="Friddie Freeman"
+        android:textColor="@color/credential_white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/userJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="312dp"
+        android:text="Software Engineer"
+        android:textColor="@color/credential_white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/userLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="340dp"
+        android:text="Kuala Lumpur"
+        android:textColor="#95F7F8F9"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="340dp"
+        app:srcCompat="@drawable/location"
+        app:tint="#95F7F8F9" />
+
+    <Button
+        android:id="@+id/userEditProfile"
+        style="@style/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="385dp"
+        android:background="@drawable/login_btn_rounded"
+        android:text="Edit Profile"
+        android:textColor="@color/credential_white" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabSwitcher"
+        style="@style/tablayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="460dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/tablayout"
+        app:tabBackground="@drawable/tabselector">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photos"
+
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Likes" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="487dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/credential_white" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPageSwitcher3"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="72dp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/editProfileContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -44,32 +44,32 @@
                 </LinearLayout>
             </LinearLayout>
 
-                <TextView
-                    android:id="@+id/rainChance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/rounded_text"
-                    android:textColor="@color/white"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="3dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="3dp"
-                    android:drawableLeft="@drawable/rainpossibility"
-                    android:drawablePadding="2dp"
-                    android:text="10%"
-                    android:textSize="17dp" />
+            <TextView
+                android:id="@+id/rainChance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_text"
+                android:textColor="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="3dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="3dp"
+                android:drawableLeft="@drawable/rainpossibility"
+                android:drawablePadding="2dp"
+                android:text="10%"
+                android:textSize="17dp" />
 
-                <TextView
-                    android:id="@+id/highTempTdy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/hightemp"
-                    android:layout_gravity="end"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="80dp"
-                    android:text="24°C" />
+            <TextView
+                android:id="@+id/highTempTdy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/hightemp"
+                android:layout_gravity="end"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="80dp"
+                android:text="24°C" />
 
             <TextView
                 android:id="@+id/lowTempTdy"
@@ -81,16 +81,16 @@
                 android:layout_marginTop="110dp"
                 android:text="20°C" />
 
-                <TextView
-                    android:id="@+id/FLTemptday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/temperature_feels_like"
-                    android:layout_gravity="end"
-                    android:layout_marginRight="15dp"
-                    android:drawablePadding="4dp"
-                    android:layout_marginTop="140dp"
-                    android:text="17°C" />
+            <TextView
+                android:id="@+id/FLTemptday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/temperature_feels_like"
+                android:layout_gravity="end"
+                android:layout_marginRight="15dp"
+                android:drawablePadding="4dp"
+                android:layout_marginTop="140dp"
+                android:text="17°C" />
 
             <TextView
                 android:id="@+id/weathertdyCard"
@@ -125,49 +125,49 @@
                 android:textColor="@color/white"
                 android:textSize="70dp" />
 
+            <TextView
+                android:id="@+id/windspeedtdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="230dp"
+                android:drawableLeft="@drawable/wind"
+                android:drawablePadding="4dp"
+                android:text="4 m/s" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="230dp"
+                >
                 <TextView
-                    android:id="@+id/windspeedtdyCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="230dp"
-                    android:drawableLeft="@drawable/wind"
-                    android:drawablePadding="4dp"
-                    android:text="4 m/s" />
-                <FrameLayout
+                    android:id="@+id/detailstdyCard"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="230dp"
-                    >
-                    <TextView
-                        android:id="@+id/detailstdyCard"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Details >"
-                        android:textAlignment="textEnd"
-                        android:layout_marginRight="15dp"
-                        />
-                </FrameLayout>
-
-                <TextView
-                    android:id="@+id/uvCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
+                    android:text="Details >"
+                    android:textAlignment="textEnd"
                     android:layout_marginRight="15dp"
-                    android:layout_marginTop="198dp"
-                    android:drawableLeft="@drawable/uv"
-                    android:drawablePadding="2dp"
-                    android:text="Low" />
+                    />
+            </FrameLayout>
 
-                <TextView
-                    android:id="@+id/unknownperctdyCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="35dp"
-                    android:layout_marginTop="200dp"
-                    android:text="30%"
-                    android:drawableLeft="@drawable/humidity"/>
+            <TextView
+                android:id="@+id/uvCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="198dp"
+                android:drawableLeft="@drawable/uv"
+                android:drawablePadding="2dp"
+                android:text="Low" />
+
+            <TextView
+                android:id="@+id/unknownperctdyCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="200dp"
+                android:text="30%"
+                android:drawableLeft="@drawable/humidity"/>
 
 
 
@@ -274,10 +274,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-                <WebView
-                    android:id="@+id/leafletWebView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+            <WebView
+                android:id="@+id/leafletWebView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </com.google.android.material.card.MaterialCardView>
 

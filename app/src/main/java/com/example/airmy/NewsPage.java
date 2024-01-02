@@ -51,9 +51,9 @@ public class NewsPage extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
 
         // Bottom nav bar
-        final ImageView home = findViewById(R.id.homePageNews);
-        final ImageView news = findViewById(R.id.NewsNews);
-        final ImageView settings = findViewById(R.id.SettingNews);
+        final ImageView home = findViewById(R.id.homePage);
+        final ImageView news = findViewById(R.id.newsPage);
+        final ImageView userPage = findViewById(R.id.userPage);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,10 +73,10 @@ public class NewsPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        settings.setOnClickListener(new View.OnClickListener() {
+        userPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NewsPage.this, SettingsPage.class);
+                Intent intent = new Intent(NewsPage.this, UserProfileAcitivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
 
                 startActivity(intent);
@@ -224,7 +224,7 @@ public class NewsPage extends AppCompatActivity {
         // Add the request to the RequestQueue.
         requestQueue.add(request1);
     }
-//    private void setupNavMenu(NavController navController){
+    //    private void setupNavMenu(NavController navController){
 //        NavigationView sideNav = findViewById(R.id.sideNav);
 //        NavigationUI.setupWithNavController(sideNav, navController);
 //    }
@@ -250,11 +250,11 @@ public class NewsPage extends AppCompatActivity {
 //            return super.onOptionsItemSelected(item);
 //        }
 //    }
-public void goToNextActivity(AppCompatActivity o) {
-    Intent intent = new Intent(this, o.getClass());
-    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
-    startActivity(intent);
+    public void goToNextActivity(AppCompatActivity o) {
+        Intent intent = new Intent(this, o.getClass());
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+        startActivity(intent);
 
 
-}
+    }
 }

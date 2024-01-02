@@ -4,6 +4,18 @@
     <string name="channel_description">A pop up notification</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Enter your email</string>
+    <string name="prompt_password">Enter your password</string>
+    <string name="prompt_password_again">Confirm password</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id">Notifications</string>
+    <string name="KEY_USER">User</string>
+    <string name="AirMyPREF">PREF</string>
 
 
 </resources>
