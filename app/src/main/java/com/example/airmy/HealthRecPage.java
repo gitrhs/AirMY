@@ -22,6 +22,15 @@ public class HealthRecPage extends AppCompatActivity {
         //add HealthRecFragment to fragment container
         addFragment(new HealthRecFragment());
 
+        ImageView settingsIcon = findViewById(R.id.settingicon);
+        settingsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HealthRecPage.this, SettingsPage.class);
+                startActivity(intent);
+            }
+        });
+
         // Bottom nav bar
         final ImageView home = findViewById(R.id.homePage);
         final ImageView news = findViewById(R.id.newsPage);

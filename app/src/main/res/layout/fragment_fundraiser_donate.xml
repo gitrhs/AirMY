@@ -1,192 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FundraiserDonate">
+    android:fillViewport="true">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/Floodraiser"
-        android:layout_width="100dp"
-        android:layout_height="179dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="30dp"
-        app:cardCornerRadius="20dp">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".FundraiserDonate">
 
-        <TextView
-            android:id="@+id/FloodraiserTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="19sp"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Floodraiser" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/Floodraiser"
+                android:layout_width="100dp"
+                android:layout_height="179dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="20dp">
 
-        <View
-            android:layout_width="340dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-35dp"
-            android:background="#CBC4C4" />
+                <TextView
+                    android:id="@+id/FloodraiserTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Floodraiser" />
 
-        <TextView
-            android:id="@+id/FloodraiserText"
-            android:layout_width="340dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="60dp"
-            android:layout_gravity="center|top"
-            android:textAlignment="center"
-            android:text="Over thousands of people get displaced and injured from floods. Make a change by helping a fundraiser for flood victims."
-            android:fontFamily="@font/montserrat"
-            android:textSize="14sp" />
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-35dp"
+                    android:background="#CBC4C4" />
 
-        <Button
-            android:id="@+id/donateButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="120dp"
-            android:backgroundTint="#1E232C"
-            android:text="Donate"
-            android:fontFamily="@font/montserrat"
-            android:textColor="#FFFFFFFF" />
+                <TextView
+                    android:id="@+id/FloodraiserText"
+                    android:layout_width="340dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_gravity="center|top"
+                    android:textAlignment="center"
+                    android:text="Over thousands of people get displaced and injured from floods. Make a change by helping a fundraiser for flood victims."
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="14sp" />
 
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/floodraiser_green"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"/>
+                <Button
+                    android:id="@+id/donateButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="120dp"
+                    android:backgroundTint="#1E232C"
+                    android:text="Donate"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="#FFFFFFFF" />
 
-    </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/floodraiser_green"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="100dp"
-        android:layout_height="179dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="250dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
+            </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/GreenpeaceTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="19sp"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Greenpeace" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="100dp"
+                android:layout_height="179dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="250dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
 
-        <View
-            android:layout_width="340dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-35dp"
-            android:background="#CBC4C4" />
+                <TextView
+                    android:id="@+id/GreenpeaceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Greenpeace" />
 
-        <TextView
-            android:id="@+id/GreenpeaceText"
-            android:layout_width="340dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="60dp"
-            android:layout_gravity="center|top"
-            android:textAlignment="center"
-            android:text="Help us prevent pollution and abuse of the earth's ocean, land, air, fresh water and so much more!"
-            android:fontFamily="@font/montserrat"
-            android:textSize="14sp" />
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-35dp"
+                    android:background="#CBC4C4" />
 
-        <Button
-            android:id="@+id/donateButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="120dp"
-            android:backgroundTint="#1E232C"
-            android:text="Donate"
-            android:fontFamily="@font/montserrat"
-            android:textColor="#FFFFFFFF" />
+                <TextView
+                    android:id="@+id/GreenpeaceText"
+                    android:layout_width="340dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_gravity="center|top"
+                    android:textAlignment="center"
+                    android:text="Help us prevent pollution and abuse of the earth's ocean, land, air, fresh water and so much more!"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="14sp" />
 
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/greenpeace_red"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp" />
+                <Button
+                    android:id="@+id/donateButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="120dp"
+                    android:backgroundTint="#1E232C"
+                    android:text="Donate"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="#FFFFFFFF" />
 
-    </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/greenpeace_red"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="100dp"
-        android:layout_height="179dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="470dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        app:cardCornerRadius="20dp">
+            </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/RehabilitatorsTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="19sp"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="Rehabilitators" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="100dp"
+                android:layout_height="179dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="470dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardCornerRadius="20dp">
 
-        <View
-            android:layout_width="340dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-35dp"
-            android:background="#CBC4C4" />
+                <TextView
+                    android:id="@+id/RehabilitatorsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="19sp"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Rehabilitators" />
 
-        <TextView
-            android:id="@+id/RehabilitatorsText"
-            android:layout_width="340dp"
-            android:layout_height="60dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="60dp"
-            android:layout_gravity="center|top"
-            android:textAlignment="center"
-            android:text="The goal is to rehabilitate destroyed marine and coastal ecosystems, addressing and combating climate change."
-            android:fontFamily="@font/montserrat"
-            android:textSize="14sp" />
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-35dp"
+                    android:background="#CBC4C4" />
 
-        <Button
-            android:id="@+id/donateButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top"
-            android:layout_marginTop="120dp"
-            android:backgroundTint="#1E232C"
-            android:text="Donate"
-            android:fontFamily="@font/montserrat"
-            android:textColor="#FFFFFFFF" />
+                <TextView
+                    android:id="@+id/RehabilitatorsText"
+                    android:layout_width="340dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="60dp"
+                    android:layout_gravity="center|top"
+                    android:textAlignment="center"
+                    android:text="The goal is to rehabilitate destroyed marine and coastal ecosystems, addressing and combating climate change."
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="14sp" />
 
-        <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/rehabilitators_blue"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp" />
+                <Button
+                    android:id="@+id/donateButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="120dp"
+                    android:backgroundTint="#1E232C"
+                    android:text="Donate"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="#FFFFFFFF" />
 
-    </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rehabilitators_blue"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp" />
 
-</RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+</ScrollView>

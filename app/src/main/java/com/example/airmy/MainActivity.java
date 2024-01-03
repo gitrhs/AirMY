@@ -95,6 +95,14 @@ public class MainActivity extends AppCompatActivity {
 
         notifManager = NotificationManagerCompat.from(this);
 
+        ImageView settingsIcon = findViewById(R.id.settingicon);
+        settingsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingsPage.class);
+                startActivity(intent);
+            }
+        });
 
         // Bottom nav bar
         final ImageView home = findViewById(R.id.homePage);
@@ -121,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         healthRec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, WelcomePage.class);
+                Intent intent = new Intent(MainActivity.this, HealthRecPage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
                 startActivity(intent);
             }

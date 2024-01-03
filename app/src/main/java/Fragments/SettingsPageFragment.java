@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
-import android.widget.ToggleButton;
+import android.widget.Switch;
 
 public class SettingsPageFragment extends Fragment {
 
@@ -18,7 +18,7 @@ public class SettingsPageFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    ToggleButton tb1, tb2, tb3, tb4, tb5, tb6;
+    Switch tb1, tb2, tb3, tb4, tb5, tb6;
 
 
     public SettingsPageFragment() {
