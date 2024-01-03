@@ -1,14 +1,12 @@
 package Fragments;
 
 import android.os.Bundle;
-
+import com.example.airmy.R;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.airmy.R;
 
 /**
  * A simple {@link Fragment} subclass.

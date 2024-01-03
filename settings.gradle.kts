@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "airMY"
+rootProject.name = "AirMy"
 include(":app")
  

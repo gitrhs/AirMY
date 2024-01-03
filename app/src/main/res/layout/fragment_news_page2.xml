@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-    <!-- headline climate news:
-    https://api.reliefweb.int/v1/reports?appname=airmy&profile=list&preset=latest&slim=1&query%5Bvalue%5D=%28climate%29+AND+_exists_%3Aheadline&query%5Boperator%5D=AND
+    <!-- latest climate news:
+    https://api.reliefweb.int/v1/reports?appname=airmy&profile=list&preset=latest&slim=1&query%5Bvalue%5D=climate&query%5Boperator%5D=AND
     -->
     <FrameLayout
         android:layout_width="match_parent"
@@ -223,3 +223,4 @@
 
     </FrameLayout>
 </ScrollView>
+

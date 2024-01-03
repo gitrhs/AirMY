@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "936924429948",
+    "project_id": "airmy-9372a",
+    "storage_bucket": "airmy-9372a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936924429948:android:2ba143d87460ac9240d3f9",
+        "android_client_info": {
+          "package_name": "com.example.airmy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6O5nThrFvOQ1l6CWJ1f8zBcA52a2K-JM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
