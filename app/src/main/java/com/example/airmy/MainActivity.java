@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         healthRec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HealthRecPage.class);
+                Intent intent = new Intent(MainActivity.this, WelcomePage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
                 startActivity(intent);
             }

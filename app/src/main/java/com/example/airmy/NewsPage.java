@@ -53,8 +53,8 @@ public class NewsPage extends AppCompatActivity {
         // Bottom nav bar
         final ImageView home = findViewById(R.id.homePage);
         final ImageView news = findViewById(R.id.newsPage);
-        final ImageView healthRec = findViewById(R.id.healthRecPage);
         final ImageView userPage = findViewById(R.id.userPage);
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,14 +69,7 @@ public class NewsPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(NewsPage.this, NewsPage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
-                startActivity(intent);
-            }
-        });
-        healthRec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NewsPage.this, HealthRecPage.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+
                 startActivity(intent);
             }
         });
@@ -85,6 +78,7 @@ public class NewsPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(NewsPage.this, UserProfileAcitivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+
                 startActivity(intent);
             }
         });
