@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.example.airmy.FundraiserPage;
 import com.example.airmy.MainActivity;
 import com.example.airmy.R;
 import com.example.airmy.WeatherData;
@@ -76,8 +77,7 @@ public class TodayFragment extends Fragment {
         donateBttnForFlood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.redcrescent.org.my");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(getActivity(), FundraiserPage.class);
                 startActivity(intent);
             }
         });

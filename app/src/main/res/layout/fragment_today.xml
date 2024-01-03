@@ -422,7 +422,6 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#F6E338"
-
                 android:textStyle="bold"
                 android:theme="@style/Theme.Material3.Dark"
                 android:text="Donate"/>/>

@@ -59,15 +59,15 @@ public class UserProfileAcitivity extends AppCompatActivity {
             }
         });
 
-//        healthRec.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(NewsPage.this, SettingsPage.class);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
-//
-//                startActivity(intent);
-//            }
-//        });
+        healthRec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserProfileAcitivity.this, HealthRecPage.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+
+                startActivity(intent);
+            }
+        });
 
 
         Button editProfile = findViewById(R.id.userEditProfile);

@@ -20,7 +20,7 @@
             android:layout_height="140dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
@@ -101,9 +101,10 @@
             android:layout_alignParentEnd="true"
             android:layout_marginStart="150dp"
             android:layout_marginLeft="150dp"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="185dp"
             android:layout_marginEnd="150dp"
             android:text="UV Index"
+            android:textStyle="bold"
             android:textAlignment="center"
             android:fontFamily="@font/montserrat"
             android:textSize="18sp" />
@@ -116,7 +117,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="115dp"
-            android:layout_marginTop="235dp"
+            android:layout_marginTop="225dp"
             android:layout_marginEnd="115dp"
             app:cardCornerRadius="20dp">
 
@@ -129,7 +130,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="445dp"
+            android:layout_marginTop="435dp"
             android:text="Now, 9.41"
             android:textSize="16sp"
             android:fontFamily="@font/montserrat"
@@ -142,10 +143,10 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="485dp"
+            android:layout_marginTop="470dp"
             android:text="Low for the rest of the day. Levels of Moderate or higher were reached from 10:00 to 17:00."
             android:fontFamily="@font/montserrat"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/HowSafe"
@@ -153,7 +154,7 @@
             android:layout_height="200dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="575dp"
+            android:layout_marginTop="565dp"
             android:layout_marginStart="50dp"
             android:layout_marginEnd="50dp"
             app:cardCornerRadius="20dp">
@@ -161,14 +162,13 @@
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_gravity="center|top"
                 android:gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="How Safe?"
-                android:textStyle="bold"
-                android:fontFamily="@font/montserrat"
+                android:fontFamily="@font/montserrat_bold"
                 android:textSize="19sp"/>
 
             <View

@@ -47,12 +47,15 @@ public class SettingsPage extends AppCompatActivity {
             }
         });
 
-//        healthRec.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+        healthRec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SettingsPage.this, HealthRecPage.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+
+                startActivity(intent);
+            }
+        });
 
         userPage.setOnClickListener(new View.OnClickListener() {
             @Override
