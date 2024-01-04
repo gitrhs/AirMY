@@ -3,6 +3,8 @@ package Fragments;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import com.example.airmy.FundraiserPage;
+
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,7 +17,6 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.example.airmy.FundraiserPage;
 import com.example.airmy.MainActivity;
 import com.example.airmy.R;
 import com.example.airmy.WeatherData;

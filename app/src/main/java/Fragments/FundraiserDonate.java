@@ -1,12 +1,17 @@
 package Fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
 import com.example.airmy.R;
 
 public class FundraiserDonate extends Fragment {
@@ -52,6 +57,69 @@ public class FundraiserDonate extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fundraiser_donate, container, false);
+        View view = inflater.inflate(R.layout.fragment_fundraiser_donate, container, false);
+
+        Button d1 = view.findViewById(R.id.donateButton1);
+        Button d2 = view.findViewById(R.id.donateButton2);
+        Button d3 = view.findViewById(R.id.donateButton3);
+
+        d1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //direct to web url
+
+                String url1 = "https://www.mercy.org.my/why-donate/";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url1));
+
+                //check if device has an app to open the url
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                } else {
+                    // Log.d("FundraiserDonate", "No app to handle the URL");
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url1));
+                    startActivity(browserIntent);
+                }
+            }
+        });
+
+        d2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //direct to web url
+
+                String url2 = "https://www.greenpeace.org/malaysia/act/donate/";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url2));
+
+                //check if device has an app to open the url
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                } else {
+                    // Log.d("FundraiserDonate", "No app to handle the URL");
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url2));
+                    startActivity(browserIntent);
+                }
+            }
+        });
+
+        d3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //direct to web url
+
+                String url3 = "https://hospismalaysia.org/donations/";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url3));
+
+                //check if device has an app to open the url
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                } else {
+                    // Log.d("FundraiserDonate", "No app to handle the URL");
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url3));
+                    startActivity(browserIntent);
+                }
+            }
+        });
+
+        return view;
     }
 }

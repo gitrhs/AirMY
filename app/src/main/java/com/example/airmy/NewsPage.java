@@ -50,20 +50,12 @@ public class NewsPage extends AppCompatActivity {
         setContentView(R.layout.activity_news_page);
         requestQueue = Volley.newRequestQueue(this);
 
-        ImageView settingsIcon = findViewById(R.id.settingicon);
-        settingsIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(NewsPage.this, SettingsPage.class);
-                startActivity(intent);
-            }
-        });
-
         // Bottom nav bar
         final ImageView home = findViewById(R.id.homePage);
         final ImageView news = findViewById(R.id.newsPage);
-        final ImageView healthRec = findViewById(R.id.healthRecPage);
         final ImageView userPage = findViewById(R.id.userPage);
+        final ImageView healthRec = findViewById(R.id.healthRecPage);
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +70,16 @@ public class NewsPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(NewsPage.this, NewsPage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+
+                startActivity(intent);
+            }
+        });
+        userPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NewsPage.this, UserProfileAcitivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+
                 startActivity(intent);
             }
         });
@@ -89,11 +91,12 @@ public class NewsPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        userPage.setOnClickListener(new View.OnClickListener() {
+
+        ImageView settingsIcon = findViewById(R.id.settingicon);
+        settingsIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NewsPage.this, UserProfileAcitivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+                Intent intent = new Intent(NewsPage.this, SettingsPage.class);
                 startActivity(intent);
             }
         });

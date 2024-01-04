@@ -24,10 +24,10 @@
             android:layout_weight="1.5"
             android:textSize="25dp"
             android:layout_height="35dp"
-
             android:layout_gravity="center_vertical"
             android:text="AirMY"
             android:layout_marginLeft="20dp"
+
             android:textStyle="bold"
             android:drawableLeft="@drawable/applogo"
             android:textColor="@color/white" />
