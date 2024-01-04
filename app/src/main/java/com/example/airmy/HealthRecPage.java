@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,12 +15,13 @@ import android.widget.ImageView;
 import Fragments.HealthRecFragment;
 
 public class HealthRecPage extends AppCompatActivity {
-
+    private SharedPreferences sharedPreferences;
+    public static final String PREF_NAME = "AirMY_SDGHeroes";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health_rec_page);
-
+        sharedPreferences = getSharedPreferences("json_data", MODE_PRIVATE);
         //add HealthRecFragment to fragment container
         addFragment(new HealthRecFragment());
 
@@ -70,7 +73,17 @@ public class HealthRecPage extends AppCompatActivity {
             }
         });
     }
+    public void saveData(String name, String value) {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(name, value);
+        editor.apply();
+    }
 
+    public String getData(String name, String defaultValue) {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(name, defaultValue);
+    }
     private void addFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();

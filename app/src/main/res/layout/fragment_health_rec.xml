@@ -48,13 +48,13 @@
 
             <TextView
                 android:id="@+id/healthEffictsToday"
-                android:layout_width="167dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="35dp"
                 android:gravity="center_horizontal"
                 android:text="Okay, but sensitive individuals may experience minor health effects"
-                android:textSize="10dp" />
+                android:textSize="8dp" />
 
             <TextView
                 android:id="@+id/AirQualityTextOnlyToday"
@@ -76,12 +76,12 @@
                 android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/airqualityNumberToday"
+                android:id="@+id/airqualityNumberTodays"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_marginTop="40dp"
-                android:text="64"
+                android:text="0"
                 android:textSize="24dp" />
 
             <ImageView
@@ -99,10 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="150dp"
-            android:layout_marginLeft="150dp"
             android:layout_marginTop="185dp"
-            android:layout_marginEnd="150dp"
             android:text="UV Index"
             android:textStyle="bold"
             android:textAlignment="center"
@@ -112,40 +109,45 @@
         <!-- UV Index -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/UVToday"
-            android:layout_width="190dp"
+            android:layout_width="wrap_content"
             android:layout_height="190dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="115dp"
             android:layout_marginTop="225dp"
-            android:layout_marginEnd="115dp"
+            android:layout_centerHorizontal="true"
             app:cardCornerRadius="20dp">
-
-        </com.google.android.material.card.MaterialCardView>
-
         <TextView
-            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="435dp"
-            android:text="Now, 9.41"
-            android:textSize="16sp"
-            android:fontFamily="@font/montserrat"
-            android:textStyle="bold" />
+            android:text="4"
+            android:textColor="#3ec1b8"
+            android:paddingRight="50dp"
+            android:paddingLeft="50dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="100dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:text="Low"
+                android:paddingRight="50dp"
+                android:paddingLeft="50dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textSize="30dp"></TextView>
+        </com.google.android.material.card.MaterialCardView>
+
+
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="311dp"
-            android:layout_height="65dp"
-            android:layout_alignParentStart="true"
+            android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="470dp"
-            android:text="Low for the rest of the day. Levels of Moderate or higher were reached from 10:00 to 17:00."
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="430dp"
             android:fontFamily="@font/montserrat"
+            android:foregroundGravity="center_horizontal"
+            android:text="Now, 9.41\n\nLow for the rest of the day. Levels of Moderate or higher were reached from 10:00 to 17:00."
             android:textSize="17sp" />
 
         <com.google.android.material.card.MaterialCardView

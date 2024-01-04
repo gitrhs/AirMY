@@ -74,7 +74,6 @@ public class TodayFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_today, container, false);
         Button donateBttnForFlood = (Button) view.findViewById(R.id.donateBttnForFlood);
-
         donateBttnForFlood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
