@@ -7,209 +7,6 @@
     tools:context=".SettingsPage">
 
 
-    <TextView
-        android:id="@+id/tv_editprofile"
-        android:layout_width="119dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="168dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Theme"
-        android:textColor="#A1FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_notifalert"
-        android:layout_width="197dp"
-        android:layout_height="23dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="328dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Forecast for Today"
-        android:textColor="#A1FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_notifalert2"
-        android:layout_width="197dp"
-        android:layout_height="23dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="364dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Forecast for Tomorrow"
-        android:textColor="#A1FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_notifalert3"
-        android:layout_width="197dp"
-        android:layout_height="23dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="400dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Units"
-        android:textColor="#A1FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_notifalert4"
-        android:layout_width="197dp"
-        android:layout_height="23dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="488dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Sound Alert Notification"
-        android:textColor="#A1FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_notifalert5"
-        android:layout_width="197dp"
-        android:layout_height="23dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="524dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Send Notification"
-        android:textColor="#A1FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_your_location"
-        android:layout_width="306dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="587dp"
-        android:layout_marginEnd="50dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Your location: Kuala Lumpur"
-        android:textAlignment="center"
-        android:textColor="#A1FFFFFF"
-        android:textSize="15sp"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_changepassword"
-        android:layout_width="177dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="204dp"
-        android:fontFamily="@font/montserrat"
-        android:text="Service API"
-        android:textColor="#A1FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_privacy"
-        android:layout_width="177dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="240dp"
-
-        android:fontFamily="@font/montserrat"
-        android:text="Language"
-        android:textColor="#A1FFFFFF"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_account"
-        android:layout_width="313dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="50dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="General"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_notification"
-        android:layout_width="311dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginEnd="50dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Forecast"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_notification2"
-        android:layout_width="308dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginEnd="50dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Notifications"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="183dp"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Settings"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -259,6 +56,83 @@
             app:tint="@color/credential_white" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/headerPage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:background="#0b1e3a"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView
+            android:id="@+id/APPName"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:textSize="25dp"
+            android:layout_height="35dp"
+
+            android:layout_gravity="center_vertical"
+            android:text="AirMY"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/applogo"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/settingicon"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/settings" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/locationlayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/headerPage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="@color/greyish"
+        app:cardCornerRadius="20dp"
+        app:cardUseCompatPadding="false">
+
+        <TextView
+            android:id="@+id/locationTextId"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="5dp"
+            android:text="Kuala Lumpur"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/locationsvg"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/location" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="72dp" />
 
 
 </RelativeLayout>

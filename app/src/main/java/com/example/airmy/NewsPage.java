@@ -54,6 +54,7 @@ public class NewsPage extends AppCompatActivity {
         final ImageView home = findViewById(R.id.homePage);
         final ImageView news = findViewById(R.id.newsPage);
         final ImageView userPage = findViewById(R.id.userPage);
+        final ImageView healthRec = findViewById(R.id.healthRecPage);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +80,23 @@ public class NewsPage extends AppCompatActivity {
                 Intent intent = new Intent(NewsPage.this, UserProfileAcitivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
 
+                startActivity(intent);
+            }
+        });
+        healthRec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NewsPage.this, HealthRecPage.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+                startActivity(intent);
+            }
+        });
+
+        ImageView settingsIcon = findViewById(R.id.settingicon);
+        settingsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NewsPage.this, SettingsPage.class);
                 startActivity(intent);
             }
         });

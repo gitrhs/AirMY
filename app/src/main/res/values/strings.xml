@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AirMy</string>
-    <string name="channel_name">Pop Up</string>
-    <string name="channel_description">A pop up notification</string>
+    <string name="channel_name">com.example.airmy</string>
+    <string name="channel_id">notification_channel</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
     <!-- Strings related to login -->
@@ -14,8 +14,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_notification_channel_id">Notifications</string>
-    <string name="KEY_USER">User</string>
-    <string name="AirMyPREF">PREF</string>
 
 
 </resources>

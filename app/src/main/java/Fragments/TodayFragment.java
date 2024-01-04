@@ -3,6 +3,8 @@ package Fragments;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import com.example.airmy.FundraiserPage;
+
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -76,8 +78,7 @@ public class TodayFragment extends Fragment {
         donateBttnForFlood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.redcrescent.org.my");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(getActivity(), FundraiserPage.class);
                 startActivity(intent);
             }
         });

@@ -10,11 +10,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-
     }
-    
 }
-
 
 rootProject.name = "AirMy"
 include(":app")
