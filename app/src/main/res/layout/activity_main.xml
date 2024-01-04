@@ -7,6 +7,42 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
+    <LinearLayout
+        android:id="@+id/headerPage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:background="#0b1e3a"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView
+            android:id="@+id/APPName"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:textSize="25dp"
+            android:layout_height="35dp"
+
+            android:layout_gravity="center_vertical"
+            android:text="AirMY"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/applogo"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/settingicon"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/settings" />
+    </LinearLayout>
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,12 +92,12 @@
             app:tint="@color/credential_white" />
 
     </LinearLayout>
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/locationlayoutId"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_marginLeft="20dp"
+        android:layout_below="@id/headerPage"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:background="@color/black"
@@ -135,11 +171,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_below="@id/tabCardId"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="140dp"
         android:layout_marginBottom="72dp" />
 
 

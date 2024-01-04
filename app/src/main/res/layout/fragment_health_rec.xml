@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="Fragments.HealthRecFragment">
+
+        <!-- Air Quality -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/airqualityToday"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp">
+
+            <ImageView
+                android:id="@+id/maskSvg"
+                android:layout_width="70dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="10dp"
+                android:layout_height="70dp"
+                android:textAlignment="viewEnd"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/masksvg" />
+
+            <TextView
+                android:id="@+id/maskRequiry"
+                android:layout_width="100dp"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="105dp"
+                android:text="Mask Required"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/healthEffictsToday"
+                android:layout_width="167dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:gravity="center_horizontal"
+                android:text="Okay, but sensitive individuals may experience minor health effects"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/AirQualityTextOnlyToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:text="Air Quality"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/airqualityTextRateToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="72dp"
+                android:text="Moderate"
+                android:textColor="#FF9800"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/airqualityNumberToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="40dp"
+                android:text="64"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/faceSvg"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/expressionless_facesvg" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="185dp"
+            android:layout_marginEnd="150dp"
+            android:text="UV Index"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp" />
+
+        <!-- UV Index -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/UVToday"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="225dp"
+            android:layout_marginEnd="115dp"
+            app:cardCornerRadius="20dp">
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="435dp"
+            android:text="Now, 9.41"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="311dp"
+            android:layout_height="65dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="470dp"
+            android:text="Low for the rest of the day. Levels of Moderate or higher were reached from 10:00 to 17:00."
+            android:fontFamily="@font/montserrat"
+            android:textSize="17sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/HowSafe"
+            android:layout_width="120dp"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="565dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:cardCornerRadius="20dp">
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center|top"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="How Safe?"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="19sp"/>
+
+            <View
+                android:layout_width="290dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-55dp"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/HowSafeText"
+                android:layout_width="280dp"
+                android:layout_height="89dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="50dp"
+                android:text="If you are sensitive to air pollution, consider reducing prolonged or heavy exertion. It might be a good idea to take more breaks, do less intense activities, or shorten the duration of outdoor activities."
+                android:fontFamily="@font/montserrat"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="140dp"
+                android:backgroundTint="#0F3E3E"
+                android:text="Show me how"
+                android:fontFamily="@font/montserrat"
+                android:textColor="#FFFFFFFF" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+</ScrollView>

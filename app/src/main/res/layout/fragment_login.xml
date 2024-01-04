@@ -97,7 +97,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="57dp"
-            android:layout_marginBottom="170dp"
+            android:layout_marginBottom="194dp"
             android:text="Don't have an account?"
             android:textColor="@color/credential_white"
             android:textSize="18dp" />
@@ -108,8 +108,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="58dp"
-            android:layout_marginBottom="170dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="195dp"
             android:text="Register Now"
             android:textColor="#2EAAA9"
             android:textSize="18dp" />

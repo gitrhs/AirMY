@@ -1,5 +1,7 @@
 package com.example.airmy;
 
+import static androidx.fragment.app.FragmentManager.TAG;
+
 import android.Manifest;
 import java.util.ArrayList;
 import androidx.annotation.NonNull;
@@ -10,6 +12,8 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
+
+import android.annotation.SuppressLint;
 import android.location.LocationListener;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -31,6 +35,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 import android.os.Looper;
 import androidx.annotation.NonNull;
@@ -40,6 +45,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -70,6 +77,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.Firebase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -78,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
     ViewPager2 viewPage;
     ViewPageSwitcher switcherViewPage;
 
-    SharedPreferences sharePref;
-    private NotificationManagerCompat notifManager;
     private LocationManager locationManager;
 
     private RequestQueue requestQueue;
@@ -92,8 +99,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        notifManager = NotificationManagerCompat.from(this);
 
 
         // Bottom nav bar
@@ -121,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         healthRec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, WelcomePage.class);
+                Intent intent = new Intent(MainActivity.this, HealthRecPage.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
                 startActivity(intent);
             }
@@ -131,6 +136,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, UserProfileAcitivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
+                startActivity(intent);
+            }
+        });
+
+
+        // Top bar
+        ImageView settingsIcon = findViewById(R.id.settingicon);
+        settingsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingsPage.class);
                 startActivity(intent);
             }
         });
@@ -185,6 +201,7 @@ public class MainActivity extends AppCompatActivity {
                 tab.getTabAt(position).select();
             }
         });
+
 
 
 
@@ -490,28 +507,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
-
-//    private void askNotificationPermission() {
-//        // This is only necessary for API level >= 33 (TIRAMISU)
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-//            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) ==
-//                    PackageManager.PERMISSION_GRANTED) {
-//                // FCM SDK (and your app) can post notifications.
-//            } else if (shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS)) {
-//                // TODO: display an educational UI explaining to the user the features that will be enabled
-//                //       by them granting the POST_NOTIFICATION permission. This UI should provide the user
-//                //       "OK" and "No thanks" buttons. If the user selects "OK," directly request the permission.
-//                //       If the user selects "No thanks," allow the user to continue without notifications.
-//            } else {
-//                // Directly ask for the permission
-//                requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
-//            }
-//        }
-//    }
 
 
 

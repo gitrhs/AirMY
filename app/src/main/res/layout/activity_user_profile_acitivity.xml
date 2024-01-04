@@ -5,10 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UserProfileAcitivity">
+    <LinearLayout
+        android:id="@+id/headerPage"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:background="#0b1e3a"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <TextView
+            android:id="@+id/APPName"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:textSize="25dp"
+            android:layout_height="35dp"
 
+            android:layout_gravity="center_vertical"
+            android:text="AirMY"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/applogo"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/settingicon"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/settings" />
+    </LinearLayout>
     <ImageView
         android:id="@+id/userBackground"
         android:layout_width="match_parent"
+        android:layout_below="@+id/headerPage"
         android:layout_height="238dp"
         android:layout_marginBottom="200dp"
         app:srcCompat="@drawable/kuala_lumpur_skyline_at_dusk_1" />
@@ -67,8 +98,9 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="130dp"
         android:layout_height="130dp"
+        android:id="@+id/imagematerial"
         android:layout_marginLeft="145dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="200dp"
         android:background="@color/black"
         app:cardCornerRadius="100dp"
 
@@ -84,31 +116,23 @@
 
     <TextView
         android:id="@+id/userName"
+        android:layout_below="@+id/imagematerial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="275dp"
         android:text="Friddie Freeman"
         android:textColor="@color/credential_white"
         android:textSize="25dp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/userJob"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="312dp"
-        android:text="Software Engineer"
-        android:textColor="@color/credential_white"
-        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/userLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/userName"
         android:text="Kuala Lumpur"
         android:textColor="#95F7F8F9"
         android:textSize="15dp" />
@@ -117,7 +141,8 @@
         android:layout_width="30dp"
         android:layout_height="18dp"
         android:layout_marginLeft="130dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/userName"
         app:srcCompat="@drawable/location"
         app:tint="#95F7F8F9" />
 
@@ -127,7 +152,8 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="385dp"
+        android:layout_below="@+id/userLocation"
+        android:layout_marginTop="10dp"
         android:background="@drawable/login_btn_rounded"
         android:text="Edit Profile"
         android:textColor="@color/credential_white" />

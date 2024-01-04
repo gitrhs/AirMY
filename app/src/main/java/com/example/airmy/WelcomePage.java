@@ -26,6 +26,10 @@ public class WelcomePage extends AppCompatActivity {
         Button registerBtn = findViewById(R.id.welcome_reg);
         RelativeLayout welcomeRelative = findViewById(R.id.welcomeRelativeLayout);
 
+        SharedPreferences prefs; // declare the sharedPreference
+        boolean value = false; // default value if no value was found
+        String key = "key"; // use this key to retrieve the value
+        String sharedPrefName = "isMySwitchChecked"; // name of your sharedPreference
 
 
         // Clicks
