@@ -25,9 +25,9 @@
 
         <Button
             android:id="@+id/welcome_log"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="25dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="540dp"
             style="@style/loginButton"
             android:background="@drawable/bttn_login_rounded"
@@ -37,9 +37,9 @@
 
         <Button
             android:id="@+id/welcome_reg"
-            android:layout_width="360dp"
+            android:layout_width="300dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="25dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="630dp"
             style="@style/registerationButton"
             android:background="@drawable/bttn_login_rounded"
@@ -53,9 +53,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="-75dp"
-            android:layout_marginEnd="-17dp"
             app:srcCompat="@drawable/image" />
     </RelativeLayout>
 

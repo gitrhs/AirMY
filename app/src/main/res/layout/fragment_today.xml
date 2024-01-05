@@ -94,10 +94,11 @@
 
             <TextView
                 android:id="@+id/weathertdyCard"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:textAlignment="viewEnd"
+                android:layout_gravity="end"
                 android:layout_marginTop="23dp"
                 android:text="Partial Cloudy"
                 android:textColor="@color/white"
@@ -134,20 +135,6 @@
                 android:drawableLeft="@drawable/wind"
                 android:drawablePadding="4dp"
                 android:text="4 m/s" />
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="230dp"
-                >
-                <TextView
-                    android:id="@+id/detailstdyCard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Details >"
-                    android:textAlignment="textEnd"
-                    android:layout_marginRight="15dp"
-                    />
-            </FrameLayout>
 
             <TextView
                 android:id="@+id/uvCard"

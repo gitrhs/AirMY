@@ -1,5 +1,7 @@
 package Fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
@@ -66,15 +69,19 @@ public class UserEditProfile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_user_edit_profile, container, false);
-        Button datePicker = view.findViewById(R.id.DOB);
-        datePicker.setOnClickListener(new View.OnClickListener() {
+        Button savechanges = view.findViewById(R.id.savechanges);
+        savechanges.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatePickerFragment newFragment = new DatePickerFragment();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                String name = ((EditText) view.findViewById(R.id.editName)).getText().toString();
+                String username = ((EditText) view.findViewById(R.id.editUserName)).getText().toString();
+                String email = ((EditText) view.findViewById(R.id.editUserEmail)).getText().toString();
+                String password = ((EditText) view.findViewById(R.id.editUserPass)).getText().toString();
 
-                newFragment.show(fragmentManager, "datePicker");
+                //String auth =
+                //String apiUrl = "https://airmy.mbed.cc/api/account/update.php" + "?name=" + username + "&username=" + username + "&email=" + email + "&password=" + password + "&auth=" + auth;
 
+                //makeAPICall(apiUrl);
             }
         });
 

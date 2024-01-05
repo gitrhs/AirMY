@@ -40,8 +40,8 @@
         android:id="@+id/userBackground"
         android:layout_width="match_parent"
         android:layout_below="@+id/headerPage"
-        android:layout_height="238dp"
-        android:layout_marginBottom="200dp"
+        android:layout_height="234dp"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/kuala_lumpur_skyline_at_dusk_1" />
 
 
@@ -54,9 +54,9 @@
 
         <ImageView
             android:id="@+id/homePage"
-            android:layout_width="65dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
 
@@ -65,9 +65,9 @@
 
         <ImageView
             android:id="@+id/newsPage"
-            android:layout_width="65dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="35dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
 
@@ -75,9 +75,9 @@
 
         <ImageView
             android:id="@+id/healthRecPage"
-            android:layout_width="65dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="40dp"
             android:layout_marginBottom="1dp"
             android:padding="12dp"
             app:tint="@color/credential_white"
@@ -85,9 +85,9 @@
 
         <ImageView
             android:id="@+id/userPage"
-            android:layout_width="65dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="35dp"
             android:layout_marginBottom="1dp"
             android:padding="12dp"
             app:srcCompat="@drawable/user_filled"
@@ -99,7 +99,7 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:id="@+id/imagematerial"
-        android:layout_marginLeft="145dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
         android:background="@color/black"
         app:cardCornerRadius="100dp"
@@ -120,7 +120,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Friddie Freeman"
+        android:text="User"
         android:textColor="@color/credential_white"
         android:textSize="25dp"
         android:textStyle="bold" />
@@ -133,30 +133,40 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/userName"
-        android:text="Kuala Lumpur"
+        android:text=" Kuala Lumpur"
         android:textColor="#95F7F8F9"
+        android:drawableLeft="@drawable/location"
         android:textSize="15dp" />
-
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="18dp"
-        android:layout_marginLeft="130dp"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/userName"
-        app:srcCompat="@drawable/location"
-        app:tint="#95F7F8F9" />
-
-    <Button
-        android:id="@+id/userEditProfile"
-        style="@style/editButton"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/userLocation"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/login_btn_rounded"
-        android:text="Edit Profile"
-        android:textColor="@color/credential_white" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/userEditProfile"
+            style="@style/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/userLocation"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_btn_rounded"
+            android:text="Login"
+            android:textColor="@color/credential_white" />
+        <Button
+            android:id="@+id/userLogout"
+            style="@style/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/userLocation"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_btn_rounded"
+            android:text="Logout"
+            android:textColor="@color/credential_white" />
+    </LinearLayout>
+
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabSwitcher"

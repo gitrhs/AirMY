@@ -35,7 +35,7 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/credentials_rounded_edittext"
             android:hint="@string/prompt_email"
-            android:inputType="textPassword"
+            android:inputType="textEmailAddress"
             android:paddingLeft="20dp"
             android:selectAllOnFocus="true"
             android:textColor="@color/black"
@@ -51,7 +51,7 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/credentials_rounded_edittext"
             android:hint="@string/prompt_password"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:paddingLeft="20dp"
             android:textColor="@color/black"
             android:selectAllOnFocus="true"
@@ -76,9 +76,9 @@
 
         <Button
             android:id="@+id/register"
-            android:layout_width="360dp"
+            android:layout_width="330dp"
             android:layout_height="70dp"
-            android:layout_marginLeft="25dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="610dp"
             style="@style/loginButton"
             android:background="@drawable/bttn_login_rounded"
@@ -91,9 +91,9 @@
             android:id="@+id/passwordImage"
             android:layout_width="33dp"
             android:layout_height="32dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="330dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:inputType="textPassword"
             android:layout_marginTop="430dp"
             android:src="@drawable/password_off" />
 
@@ -101,9 +101,9 @@
             android:id="@+id/passwordImage2"
             android:layout_width="33dp"
             android:layout_height="32dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="329dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:inputType="textPassword"
             android:layout_marginTop="520dp"
             android:src="@drawable/password_off" />
 

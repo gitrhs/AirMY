@@ -14,7 +14,7 @@ import Fragments.FragmentLogin;
 import Fragments.FragmentRegisteration;
 
 public class WelcomePage extends AppCompatActivity {
-
+    public static final String PREF_NAME = "AirMY_SDGHeroes";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +59,17 @@ public class WelcomePage extends AppCompatActivity {
 
 
 
+    }
+    public void saveData(String name, String value) {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(name, value);
+        editor.apply();
+    }
+
+    public String getData(String name, String defaultValue) {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(name, defaultValue);
     }
 }
 

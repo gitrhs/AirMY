@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.airmy.MainActivity;
 import com.example.airmy.R;
+import com.example.airmy.UserProfileAcitivity;
 import com.example.airmy.WelcomePage;
 
 import org.json.JSONException;
@@ -65,7 +68,51 @@ public class FragmentRegisteration extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_registeration, container, false);
+        ImageView passwordImage = view.findViewById(R.id.passwordImage);
+        EditText passwordText = view.findViewById(R.id.passwordText_reg);
+        final boolean[] flag = {true};
+        passwordImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                if(flag[0] == false)
+                {
+                    passwordImage.setImageResource(R.drawable.password_off);
+                    passwordText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    flag[0] = true;
+                }
+                else if (flag[0] == true)
+                {
+                    passwordImage.setImageResource(R.drawable.password_on);
+                    passwordText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    flag[0] = false;
+                }
+
+            }
+        });
+
+        ImageView passwordImage2 = view.findViewById(R.id.passwordImage2);
+        EditText passwordText2 = view.findViewById(R.id.passwordTextAgain_reg);
+        final boolean[] flag2 = {true};
+        passwordImage2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(flag2[0] == false)
+                {
+                    passwordImage2.setImageResource(R.drawable.password_off);
+                    passwordText2.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    flag2[0] = true;
+                }
+                else if (flag[0] == true)
+                {
+                    passwordImage2.setImageResource(R.drawable.password_on);
+                    passwordText2.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    flag2[0] = false;
+                }
+
+            }
+        });
         Button register = view.findViewById(R.id.register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,9 +186,13 @@ public class FragmentRegisteration extends Fragment {
                 String name = jsonResponse.getString("name");
                 String username = jsonResponse.getString("username");
                 String email = jsonResponse.getString("email");
-                String loginAuth = jsonResponse.getString("auth");
+                String auth = jsonResponse.getString("auth");
                 // save the loginAuth on localstorage
-
+                WelcomePage welcomepage = (WelcomePage) getActivity();
+                welcomepage.saveData("loginName", name);
+                welcomepage.saveData("loginUsername", username);
+                welcomepage.saveData("loginEmail", email);
+                welcomepage.saveData("sessionID", auth);
 
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
@@ -153,7 +204,7 @@ public class FragmentRegisteration extends Fragment {
                             @Override
                             public void run() {
                                 // Go back to welcomePage so the user can login
-                                Intent intent = new Intent(getActivity(), WelcomePage.class);
+                                Intent intent = new Intent(getActivity(), UserProfileAcitivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION); // remove animation
                                 startActivity(intent);
                             }
