@@ -1,7 +1,9 @@
 package Fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -13,6 +15,10 @@ import android.widget.TextView;
 import com.example.airmy.HealthRecPage;
 import com.example.airmy.MainActivity;
 import com.example.airmy.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.Calendar;
 
@@ -118,17 +124,68 @@ public class HealthRecFragment extends Fragment {
         TextView maskRequiry = view.findViewById(R.id.maskRequiry);
         maskRequiry.setText(maskStatus);
 
-        //hours and minutes rn
-        Calendar calendar = Calendar.getInstance();
-        int currentHour = calendar.get(Calendar.HOUR_OF_DAY); // 24-hour format
-        int currentMinute = calendar.get(Calendar.MINUTE);
+        String jsonString = healthPage.getData("current_data", "");
+        if (!jsonString.isEmpty()) {
+            try {
 
-        // Format the time as a string
-        String currentTime = String.format("Now, %02d.%02d", currentHour, currentMinute);
+                // Convert the JSON string to a JSONObject
+                JSONObject jsonObject = new JSONObject(jsonString);
+                JSONObject currentObject = jsonObject.getJSONObject("current");
+                int uvNum = currentObject.getInt("uv");
+                String numUV = Integer.toString(uvNum);
+                String uvText, uvcolor, uvDescription, uvSafetyDescription;
+                if (uvNum <=2){
+                    uvText = "Low";
+                    uvcolor = "#34ff34";
+                    uvDescription = "Minimal danger. No protection needed. Enjoy outdoor activities with little or no risk of harm.";
+                    uvSafetyDescription = "The UV level is low, indicating minimal danger. It's generally safe to enjoy outdoor activities without significant risk of harm.";
+                } else if (uvNum <=5){
+                    uvText = "Moderate";
+                    uvcolor = "#f3d756";
+                    uvSafetyDescription = "The UV level is moderate, suggesting a low risk of harm. Take basic precautions like wearing sunglasses and using sunscreen for added safety.";
+                    uvDescription = "Low risk of harm from unprotected sun exposure. Take precautions such as wearing sunglasses and using sunscreen.";
+                } else if (uvNum <= 7){
+                    uvText = "High";
+                    uvcolor = "#f81b00";
+                    uvSafetyDescription = "The UV level is high, posing a considerable risk of harm. Protect yourself by limiting sun exposure during peak hours and using adequate protective measures.";
+                    uvDescription = "High risk of harm. Protection against sun damage is needed. Limit sun exposure during peak hours and use protective measures.";
+                } else if (uvNum <= 10){
+                    uvText = "Very High";
+                    uvcolor = "#cc51f2";
+                    uvSafetyDescription = "The UV level is very high, indicating a significant risk of harm. Extra precautions are necessary, including avoiding outdoor activities during midday hours and using sunscreen, hats, and sunglasses.";
+                    uvDescription = "Very high risk of harm. Extra precautions are necessary. Avoid being outside during midday hours, and use sunscreen, hats, and sunglasses.";
+                } else {
+                    uvText = "Extreme";
+                    uvcolor = "#6434fb";
+                    uvSafetyDescription = "The UV level is extreme, representing an extreme risk of harm. Outdoor activities during peak sunlight hours should be avoided, and stringent protective measures must be taken.";
+                    uvDescription = "Extreme risk of harm. Unprotected skin and eyes can burn quickly. Avoid outdoor activities during peak sunlight hours, and take all possible precautions.";
+                }
+                Log.d("hasilUV", " result: " + uvNum);
+                TextView uvCard = view.findViewById(R.id.uvIndexText);
+                uvCard.setText(numUV);
+                //change the color
+                uvCard.setTextColor(Color.parseColor(uvcolor)); // Replace R.color.your_color with your color resource
+                //change textUV
+                TextView textUV = view.findViewById(R.id.textUV);
+                textUV.setText(uvText);
+                //change HowSafeText
+                TextView HowSafeText = view.findViewById(R.id.HowSafeText);
+                HowSafeText.setText(uvSafetyDescription);
+                //hours and minutes rn
+                Calendar calendar = Calendar.getInstance();
+                int currentHour = calendar.get(Calendar.HOUR_OF_DAY); // 24-hour format
+                int currentMinute = calendar.get(Calendar.MINUTE);
 
-        // Find the TextView by its ID and set the text
-        TextView textView4 = view.findViewById(R.id.textView7);
-        textView4.setText(currentTime);
+                // Format the time as a string
+                String currentTime = String.format("Now, %02d.%02d\n\n"+uvDescription, currentHour, currentMinute);
+
+                // Find the TextView by its ID and set the text
+                TextView textView4 = view.findViewById(R.id.textView7);
+                textView4.setText(currentTime);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
         // Return the modified view
         return view;
     }

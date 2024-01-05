@@ -115,6 +115,7 @@
             android:layout_centerHorizontal="true"
             app:cardCornerRadius="20dp">
         <TextView
+            android:id="@+id/uvIndexText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4"
@@ -125,6 +126,7 @@
             android:layout_gravity="center_horizontal"
             android:textSize="100dp"></TextView>
             <TextView
+                android:id="@+id/textUV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="130dp"
@@ -152,56 +154,59 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/HowSafe"
-            android:layout_width="120dp"
-            android:layout_height="200dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="565dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="20dp"
             app:cardCornerRadius="20dp">
 
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center|top"
-                android:gravity="center_horizontal"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="How Safe?"
-                android:fontFamily="@font/montserrat_bold"
-                android:textSize="19sp"/>
-
-            <View
-                android:layout_width="290dp"
-                android:layout_height="1dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="-55dp"
-                android:background="#FFFFFF" />
-
-            <TextView
-                android:id="@+id/HowSafeText"
-                android:layout_width="280dp"
-                android:layout_height="89dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="50dp"
-                android:text="If you are sensitive to air pollution, consider reducing prolonged or heavy exertion. It might be a good idea to take more breaks, do less intense activities, or shorten the duration of outdoor activities."
-                android:fontFamily="@font/montserrat"
-                android:textSize="13sp" />
-
-            <Button
-                android:id="@+id/button"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="140dp"
-                android:backgroundTint="#0F3E3E"
-                android:text="Show me how"
-                android:fontFamily="@font/montserrat"
-                android:textColor="#FFFFFFFF" />
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="How Safe?"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="19sp"/>
+
+                <View
+                    android:layout_width="290dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:background="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/HowSafeText"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="If you are sensitive to air pollution, consider reducing prolonged or heavy exertion. It might be a good idea to take more breaks, do less intense activities, or shorten the duration of outdoor activities."
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="#0F3E3E"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Show me how"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="#FFFFFFFF" />
+            </LinearLayout>
 
 
         </com.google.android.material.card.MaterialCardView>
