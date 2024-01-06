@@ -16,9 +16,9 @@
 
         <ImageView
             android:id="@+id/homePage"
-            android:layout_width="65dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
 
@@ -27,9 +27,9 @@
 
         <ImageView
             android:id="@+id/newsPage"
-            android:layout_width="65dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="35dp"
             android:layout_marginBottom="1dp"
             android:padding="15dp"
 
@@ -37,9 +37,9 @@
 
         <ImageView
             android:id="@+id/healthRecPage"
-            android:layout_width="65dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="40dp"
             android:layout_marginBottom="1dp"
             android:padding="12dp"
             app:tint="@color/credential_white"
@@ -47,9 +47,9 @@
 
         <ImageView
             android:id="@+id/userPage"
-            android:layout_width="65dp"
+            android:layout_width="1dp"
+            android:layout_weight="1"
             android:layout_height="70dp"
-            android:layout_marginLeft="35dp"
             android:layout_marginBottom="1dp"
             android:padding="12dp"
             app:srcCompat="@drawable/user_not_filled"
