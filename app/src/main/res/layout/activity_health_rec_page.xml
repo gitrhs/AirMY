@@ -43,7 +43,7 @@
             android:layout_marginBottom="1dp"
             android:padding="12dp"
             app:tint="@color/credential_white"
-            app:srcCompat="@drawable/heart_not_filled" />
+            app:srcCompat="@drawable/heart_filled" />
 
         <ImageView
             android:id="@+id/userPage"
