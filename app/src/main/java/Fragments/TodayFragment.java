@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.example.airmy.MainActivity;
 import com.example.airmy.R;
 import com.example.airmy.WeatherData;
+import com.google.android.material.card.MaterialCardView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -185,6 +186,10 @@ public class TodayFragment extends Fragment {
                     double maxTempC = day.getDouble("maxtemp_c");
                     double minTempC = day.getDouble("mintemp_c");
                     int dailyChanceOfRain = day.getInt("daily_chance_of_rain");
+                    if (dailyChanceOfRain < 50){
+                        MaterialCardView umbrella = view.findViewById(R.id.umbrella);
+                        umbrella.setVisibility(View.GONE);
+                    }
                     int uvNum = currentObject.getInt("uv");
                     String uvText;
                     if (uvNum <=2){
@@ -197,6 +202,13 @@ public class TodayFragment extends Fragment {
                         uvText = "Very High";
                     } else {
                         uvText = "Extreme";
+                    }
+                    if (uvNum < 6){
+                        MaterialCardView hatCardView = view.findViewById(R.id.hat);
+                        hatCardView.setVisibility(View.GONE);
+
+                        MaterialCardView glasses = view.findViewById(R.id.glasses);
+                        glasses.setVisibility(View.GONE);
                     }
                     //save the rainChance
                     TextView rainChance = view.findViewById(R.id.rainChance);
@@ -213,6 +225,10 @@ public class TodayFragment extends Fragment {
                     //uvCard
                     TextView uvCard = view.findViewById(R.id.uvCard);
                     uvCard.setText(uvText);
+                    if (wind_kph < 49 || tempC > 20){
+                        MaterialCardView jacket = view.findViewById(R.id.jacket);
+                        jacket.setVisibility(View.GONE);
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -233,9 +249,13 @@ public class TodayFragment extends Fragment {
                     AQINum = Integer.parseInt(AQI);
                     if (AQINum >= 0 && AQINum <= 50) {
                         AQIText = "Good";
+                        MaterialCardView mask = view.findViewById(R.id.mask);
+                        mask.setVisibility(View.GONE);
                         AQIDesc = "Air quality is good, and air pollution poses little or no risk.";
                     } else if (AQINum <= 100) {
                         AQIText = "Moderate";
+                        MaterialCardView mask = view.findViewById(R.id.mask);
+                        mask.setVisibility(View.GONE);
                         AQIDesc = "Okay, but sensitive individuals may experience minor health effects.";
                     } else if (AQINum <= 150) {
                         AQIText = "Unhealthy for Sensitive Groups";

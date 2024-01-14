@@ -168,31 +168,7 @@
     </LinearLayout>
 
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabSwitcher"
-        style="@style/tablayoutStyle"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="460dp"
-        android:layout_marginRight="25dp"
-        android:background="@drawable/tablayout"
-        app:tabBackground="@drawable/tabselector">
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Photos"
-
-            />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Likes" />
-
-
-    </com.google.android.material.tabs.TabLayout>
 
     <View
         android:layout_width="match_parent"
@@ -202,17 +178,6 @@
         android:layout_marginRight="25dp"
         android:background="@color/credential_white" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPageSwitcher3"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginBottom="72dp" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/editProfileContainer"

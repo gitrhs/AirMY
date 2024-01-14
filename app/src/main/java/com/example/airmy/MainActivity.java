@@ -218,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString(name, defaultValue);
     }
+
     //location
     private LocationListener locationListener = new LocationListener() {
         @Override

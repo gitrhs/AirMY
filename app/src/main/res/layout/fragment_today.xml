@@ -269,6 +269,7 @@
         </com.google.android.material.card.MaterialCardView>
 
         <!--    What to wear today    -->
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/clothesToday"
             android:layout_width="match_parent"
@@ -281,98 +282,107 @@
             android:layout_marginBottom="20dp"
             app:cardBackgroundColor="#262627"
             app:cardCornerRadius="20dp">
-
             <TextView
                 android:id="@+id/clothesToWear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:text="Clothes according to the weather"
+                android:layout_gravity="center_horizontal"
+                android:text="add-on according to the weather"
                 android:textSize="19dp" />
-
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="60dp"
-                app:cardCornerRadius="10dp">
-
-                <ImageView
-                    android:id="@+id/clothHat"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/clothesColor"
-                    android:padding="10dp"
-                    android:src="@drawable/capsvg" />
-            </com.google.android.material.card.MaterialCardView>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="60dp"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/hat">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="85dp"
-                android:layout_marginTop="60dp"
-                app:cardCornerRadius="10dp">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@color/clothesColor"
+                        android:padding="10dp"
+                        android:src="@drawable/capsvg" />
+                </com.google.android.material.card.MaterialCardView>
 
-                <ImageView
-                    android:id="@+id/clothGlasses"
-                    android:layout_width="66dp"
-                    android:layout_height="60dp"
-                    android:background="@color/clothesColor"
-                    android:padding="10dp"
-                    android:src="@drawable/sunglassessvg" />
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="160dp"
-                android:layout_marginTop="60dp"
-                app:cardCornerRadius="10dp">
-
-                <ImageView
-                    android:id="@+id/clothShirt"
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/clothesColor"
-                    android:padding="10dp"
-                    android:src="@drawable/shirtsvg" />
-            </com.google.android.material.card.MaterialCardView>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="60dp"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/glasses">
 
+                    <ImageView
+                        android:layout_width="66dp"
+                        android:layout_height="60dp"
+                        android:background="@color/clothesColor"
+                        android:padding="10dp"
+                        android:src="@drawable/sunglassessvg" />
+                </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="230dp"
-                android:layout_marginTop="60dp"
-                app:cardCornerRadius="10dp">
-
-                <ImageView
-                    android:id="@+id/clothPants"
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/jacket"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/clothesColor"
-                    android:padding="10dp"
-                    android:src="@drawable/shortssvg" />
-            </com.google.android.material.card.MaterialCardView>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="60dp"
+                    app:cardCornerRadius="10dp">
 
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@color/clothesColor"
+                        android:padding="10dp"
+                        android:src="@drawable/jacket" />
+                </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="300dp"
-                android:layout_marginTop="60dp"
-                app:cardCornerRadius="10dp">
-
-                <ImageView
-                    android:id="@+id/clothShoes"
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/clothesColor"
-                    android:padding="10dp"
-                    android:src="@drawable/sneakersvg" />
-            </com.google.android.material.card.MaterialCardView>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="60dp"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/mask">
+
+                    <ImageView
+                        android:id="@+id/clothPants"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@color/clothesColor"
+                        android:padding="10dp"
+                        android:src="@drawable/face_mask_icon" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="60dp"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/umbrella">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@color/clothesColor"
+                        android:padding="10dp"
+                        android:src="@drawable/umbrella" />
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
 
 
         </com.google.android.material.card.MaterialCardView>

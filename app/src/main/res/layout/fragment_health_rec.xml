@@ -188,24 +188,13 @@
                 <TextView
                     android:id="@+id/HowSafeText"
                     android:layout_width="260dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:text="If you are sensitive to air pollution, consider reducing prolonged or heavy exertion. It might be a good idea to take more breaks, do less intense activities, or shorten the duration of outdoor activities."
                     android:fontFamily="@font/montserrat"
                     android:textSize="13sp" />
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:backgroundTint="#0F3E3E"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Show me how"
-                    android:fontFamily="@font/montserrat"
-                    android:textColor="#FFFFFFFF" />
             </LinearLayout>
 
 
@@ -217,7 +206,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="800dp"
+            android:layout_marginTop="750dp"
             android:layout_marginBottom="20dp"
             app:cardCornerRadius="20dp">
 
@@ -284,7 +273,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="970dp"
+            android:layout_marginTop="950dp"
             android:layout_marginBottom="20dp"
             app:cardCornerRadius="20dp">
 

@@ -106,7 +106,7 @@ public class SevenDaysFragment extends Fragment {
                 String maxTemp = String.format("%.1f°C", maxTempC);
                 String humidity = String.format("%d%%", avgHumidity);
                 String minTemp = String.format("%.1f°C", minTempC);
-                String uv = uvText;
+                String uv = Integer.toString(uvNum);
 
                 // Create WeatherData object and add it to the list
                 weatherDataList.add(new WeatherData(chanceOfRain, dayOfWeek, condition, temperature, maxTemp, humidity, minTemp, uv));

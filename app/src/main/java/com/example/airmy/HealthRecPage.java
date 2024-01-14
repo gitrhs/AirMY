@@ -8,9 +8,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import Fragments.HealthRecFragment;
 
@@ -72,6 +74,11 @@ public class HealthRecPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        String userLocation = getData("user_location", "Kuala Lumpur");
+        // Update the TextView with the user_location
+        TextView locationTextView = findViewById(R.id.locationTextId);
+        locationTextView.setText(userLocation);
     }
     public void saveData(String name, String value) {
         SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
@@ -90,5 +97,9 @@ public class HealthRecPage extends AppCompatActivity {
 
         transaction.replace(R.id.fragment_container, fragment);
         transaction.commit();
+    }
+    public void openUrlInBrowser(String url) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
     }
 }

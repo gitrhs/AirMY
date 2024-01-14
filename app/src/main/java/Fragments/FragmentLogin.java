@@ -141,9 +141,11 @@ public class FragmentLogin extends Fragment {
                 String email = ((EditText) view.findViewById(R.id.emailText_login)).getText().toString();
                 String password = ((EditText) view.findViewById(R.id.passwordText_login)).getText().toString();
                 //call the api
+                WelcomePage welcomepage = (WelcomePage) getActivity();
+                String token = welcomepage.getData("FCM_Token", "null");
+                //String apiUrl = "https://airmy.mbed.cc/api/account/login.php" + "?email=" + email + "&password=" + password;
                 String apiUrl = "https://airmy.mbed.cc/api/account/login.php" +
-                        "?email=" + email + "&password=" + password;
-
+                        "?email=" + email + "&password=" + password + "&fcm_token=" + token;
                 makeAPICall(apiUrl);
                 // go to Homepage if the login is successful
                 Intent intent = new Intent(getActivity(), new MainActivity().getClass());

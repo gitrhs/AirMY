@@ -1,6 +1,8 @@
 package Fragments;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.core.content.ContextCompat;
@@ -10,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.airmy.HealthRecPage;
@@ -113,7 +116,14 @@ public class HealthRecFragment extends Fragment {
             maskStatus = "-";
             AQIDesc = "Unknown AQI category";
         }
-
+        //SET THE telegram button
+        Button openUrlButton = view.findViewById(R.id.telegrambutton);
+        openUrlButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                healthPage.openUrlInBrowser("https://t.me/+a32GoR3tFd41Y2Jl");
+            }
+        });
         //show the text on "airqualityTextRateToday"
         TextView airqualityTextRateToday = view.findViewById(R.id.airqualityTextRateToday);
         airqualityTextRateToday.setText(AQIText);

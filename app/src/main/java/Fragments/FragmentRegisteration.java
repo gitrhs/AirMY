@@ -121,9 +121,11 @@ public class FragmentRegisteration extends Fragment {
                 String username = ((EditText) view.findViewById(R.id.username_reg)).getText().toString();
                 String email = ((EditText) view.findViewById(R.id.email_reg)).getText().toString();
                 String password = ((EditText) view.findViewById(R.id.passwordText_reg)).getText().toString();
+                WelcomePage welcomepage = (WelcomePage) getActivity();
+                String token = welcomepage.getData("FCM_Token", "null");
                 //call the api
                 String apiUrl = "https://airmy.mbed.cc/api/account/create.php" +
-                        "?name=" + username + "&username=" + username + "&email=" + email + "&password=" + password;
+                        "?name=" + username + "&username=" + username + "&email=" + email + "&password=" + password + "&fcm_token=" + token;;
 
                 makeAPICall(apiUrl);
             }

@@ -18,6 +18,7 @@ import com.google.android.material.tabs.TabLayout;
 import Fragments.FragmentRegisteration;
 import Fragments.UserEditProfile;
 import com.example.airmy.WelcomePage;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class UserProfileAcitivity extends AppCompatActivity {
 
@@ -142,36 +143,7 @@ public class UserProfileAcitivity extends AppCompatActivity {
         });
 
 
-        // Tab switching ( latest and this week )
-        tab = findViewById(R.id.tabSwitcher);
-        viewPage = findViewById(R.id.viewPageSwitcher3);
-        switcherViewPage = new ViewPageSwitcher3(this);
-        viewPage.setAdapter(switcherViewPage);
-        tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPage.setCurrentItem(tab.getPosition());
-            }
 
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
-        // for when pulling manually the tab changes with the view.
-        viewPage.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                tab.getTabAt(position).select();
-            }
-        });
     }
     public void saveData(String name, String value) {
         SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
@@ -191,4 +163,5 @@ public class UserProfileAcitivity extends AppCompatActivity {
         editor.remove(name);
         editor.apply();
     }
+
 }

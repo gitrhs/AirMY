@@ -5,15 +5,18 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import Fragments.FundraiserMain;
 
 public class FundraiserPage extends AppCompatActivity {
-
+    public static final String PREF_NAME = "AirMY_SDGHeroes";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,8 +72,16 @@ public class FundraiserPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
 
+        String userLocation = getData("user_location", "Kuala Lumpur");
+        // Update the TextView with the user_location
+        TextView locationTextView = findViewById(R.id.locationTextId);
+        locationTextView.setText(userLocation);
+    }
+    public String getData(String name, String defaultValue) {
+        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(name, defaultValue);
+    }
     //method to replace fragment in FrameLayout
     public void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
