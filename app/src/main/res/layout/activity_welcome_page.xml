@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomePage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/welcomeRelativeLayout"
+        >
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="420dp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="AirMy"
+            android:textColor="@color/credential_white"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/welcome_log"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="540dp"
+            style="@style/loginButton"
+            android:background="@drawable/bttn_login_rounded"
+            android:text="Login"
+            android:textColor="@color/credential_white"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/welcome_reg"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="630dp"
+            style="@style/registerationButton"
+            android:background="@drawable/bttn_login_rounded"
+            android:backgroundTint="@color/credential_white"
+            android:text="Register"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-75dp"
+            app:srcCompat="@drawable/image" />
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/welcomePageFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".SettingsPage">
+
+        <TextView
+            android:id="@+id/General"
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="General"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_theme"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="72dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Theme"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_serviceprovider"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="118dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Service Provider"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="327dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="164dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Language"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Forecast"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="222dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Forecast"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_forecastfortoday"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="274dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Forecast for Today"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_forecastfortmrw"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="320dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Forecast for Tomorrow"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_units"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="366dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Units"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_units_desc"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="397dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Set the unit of weather data"
+            android:textColor="#6BFFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Notifs"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="455dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Notifications"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_soundalert"
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="507dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Sound Alert"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_sendnotif"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="553dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Send Notification"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/NotifRefrence"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="612dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Notification Preference"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_weathernotif"
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="664dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Weather Notifications"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_newsnotif"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="710dp"
+            android:fontFamily="@font/montserrat"
+            android:text="News Notifications"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_healthrecnotif"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="756dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Health Rec Notifications"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_fundraisernotif"
+            android:layout_width="301dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="802dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Fundraiser Notifications"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="73dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="490dp" />
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="73dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="540dp" />
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="73dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="650dp" />
+
+        <Switch
+            android:id="@+id/switch4"
+            android:layout_width="73dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="698dp" />
+
+        <Switch
+            android:id="@+id/switch5"
+            android:layout_width="73dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="743dp" />
+
+        <Switch
+            android:id="@+id/switch6"
+            android:layout_width="73dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="788dp" />
+
+
+        <TextView
+            android:id="@+id/ThemeBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#6BFFFFFF"
+            android:drawableRight="@drawable/ic_chevron_right"
+            android:text="Dark Mode" />
+
+        <TextView
+            android:id="@+id/ServiceProviderLocationAPI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="116dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#6BFFFFFF"
+            android:drawableRight="@drawable/ic_chevron_right"
+            android:text="Location API" />
+
+        <TextView
+            android:id="@+id/LanguageEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="162dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#6BFFFFFF"
+            android:drawableRight="@drawable/ic_chevron_right"
+            android:text="English" />
+
+        <TextView
+            android:id="@+id/ForecastTodayON"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="272dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#6BFFFFFF"
+            android:drawableRight="@drawable/ic_chevron_right"
+            android:text="On" />
+
+        <TextView
+            android:id="@+id/ForecastTomorrowOFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="320dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#6BFFFFFF"
+            android:drawableRight="@drawable/ic_chevron_right"
+            android:text="Off" />
+
+        <TextView
+            android:id="@+id/UnitsCelcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="366dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#6BFFFFFF"
+            android:drawableRight="@drawable/ic_chevron_right"
+            android:text="°C" />
+
+    </RelativeLayout>
+
+</ScrollView>

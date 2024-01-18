@@ -1,0 +1,137 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="Fragments.FragmentRegisteration">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/username_reg"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/credentials_rounded_edittext"
+            android:hint="Username"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/very_light_grey"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/email_reg"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="325dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/credentials_rounded_edittext"
+            android:hint="@string/prompt_email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="20dp"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/very_light_grey"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/passwordText_reg"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="410dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/credentials_rounded_edittext"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:selectAllOnFocus="true"
+            android:textColorHint="@color/very_light_grey"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/passwordTextAgain_reg"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/credentials_rounded_edittext"
+            android:hint="@string/prompt_password_again"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:selectAllOnFocus="true"
+            android:textColorHint="@color/very_light_grey"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="330dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="610dp"
+            style="@style/loginButton"
+            android:background="@drawable/bttn_login_rounded"
+            android:backgroundTint="@color/buttonLogin"
+            android:text="Agree and Register"
+            android:textColor="@color/credential_white"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/passwordImage"
+            android:layout_width="33dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="430dp"
+            android:src="@drawable/password_off" />
+
+        <ImageView
+            android:id="@+id/passwordImage2"
+            android:layout_width="33dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="50dp"
+            android:inputType="textPassword"
+            android:layout_marginTop="520dp"
+            android:src="@drawable/password_off" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="145dp"
+            android:fontFamily="@font/urbanist_regular"
+            android:text="Welcome to AirMy, Please Register"
+            android:textColor="@color/credential_white"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_btn_rounded"
+
+            android:padding="10dp"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+</FrameLayout>
